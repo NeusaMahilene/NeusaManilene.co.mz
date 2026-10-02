@@ -43,17 +43,18 @@
 
 <header class="site-header">
 
-    <div class="container header-content">
+    <div class="container header-inner">
 
         <!-- LOGO -->
+
         <a href="index.html"
            class="logo">
 
-            <div class="logo-symbol">
+            <div class="logo-mark">
                 N
             </div>
 
-            <div class="logo-text">
+            <div>
                 <strong>NEUSA DIGITAL</strong>
                 <span>SERVICES</span>
             </div>
@@ -65,17 +66,16 @@
 
         <nav class="main-nav">
 
-            <a href="index.html"
-               class="active">
+            <a href="index.html">
                 Início
             </a>
 
-            <a href="serviços.html">
+            <a href="servicos.html">
                 Serviços
             </a>
 
-            <a href="portifolio.html">
-                Portifolio
+            <a href="portfolio.html">
+                Portfólio
             </a>
 
             <a href="sobre.html">
@@ -97,7 +97,7 @@
         </nav>
 
 
-        <!-- BOTÃO -->
+        <!-- BOTÃO DESKTOP -->
 
         <a href="contacto.html"
            class="header-button">
@@ -109,11 +109,13 @@
         </a>
 
 
-        <!-- MENU MOBILE -->
+        <!-- BOTÃO MOBILE -->
 
         <button class="menu-button"
                 id="menuButton"
-                aria-label="Abrir menu">
+                type="button"
+                aria-label="Abrir menu"
+                aria-expanded="false">
 
             ☰
 
@@ -170,21 +172,18 @@
 
 <section class="hero">
 
-    <div class="hero-background"></div>
-
-    <div class="container hero-content">
-
+    <div class="container hero-inner">
 
         <!-- TEXTO -->
 
-        <div class="hero-text">
+        <div class="hero-content">
 
-            <div class="hero-label">
+            <div class="hero-badge">
 
-                <span class="label-line"></span>
+                <span>✦</span>
 
-                SOLUÇÕES DIGITAIS PARA PESSOAS,
-                ESTUDANTES E EMPRESAS
+                Soluções digitais para pessoas,
+                estudantes e empresas
 
             </div>
 
@@ -200,14 +199,9 @@
             </h1>
 
 
-            <h2>
-                Transformamos ideias
-                em soluções digitais.
-            </h2>
+            <p>
 
-
-            <p class="hero-description">
-
+                Transformamos ideias em soluções digitais.
                 Desenvolvimento web, programação,
                 serviços digitais, documentos profissionais,
                 dados e assistência virtual — tudo num só lugar.
@@ -220,7 +214,7 @@
             <div class="hero-buttons">
 
                 <a href="contacto.html"
-                   class="primary-button">
+                   class="btn btn-primary">
 
                     Solicitar um Serviço
 
@@ -230,52 +224,13 @@
 
 
                 <a href="portfolio.html"
-                   class="secondary-button">
+                   class="btn btn-secondary">
 
                     Ver o Nosso Trabalho
 
                     <span>→</span>
 
                 </a>
-
-            </div>
-
-
-            <!-- CONFIANÇA -->
-
-            <div class="hero-trust">
-
-                <div>
-
-                    <strong>✓</strong>
-
-                    <span>
-                        Trabalho de qualidade
-                    </span>
-
-                </div>
-
-
-                <div>
-
-                    <strong>◷</strong>
-
-                    <span>
-                        Entrega no prazo
-                    </span>
-
-                </div>
-
-
-                <div>
-
-                    <strong>◌</strong>
-
-                    <span>
-                        Suporte contínuo
-                    </span>
-
-                </div>
 
             </div>
 
@@ -288,177 +243,68 @@
         <div class="hero-visual">
 
 
+            <!-- CARTÃO CENTRAL -->
+
+            <div class="device">
+
+                <div class="device-top">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+
+                <div class="device-body">
+
+                    <div class="dashboard-line"></div>
+
+                    <div class="dashboard-grid">
+
+                        <div class="dashboard-card"></div>
+
+                        <div class="dashboard-card"></div>
+
+                        <div class="dashboard-card large"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
             <!-- CARTÃO DE CÓDIGO -->
 
             <div class="code-card">
 
-                <div class="code-top">
-
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
-                </div>
-
-
-                <div class="code-content">
-
-                    <span class="purple">
-                        &lt;div&gt;
-                    </span>
-
-                    <span>
-                        solution
-                    </span>
-
-                    <span class="blue">
-                        = "digital"
-                    </span>
-
-                    <span class="purple">
-                        &lt;/div&gt;
-                    </span>
-
-                </div>
+                &lt;div&gt;<br>
+                &nbsp;&nbsp;solution<br>
+                &nbsp;&nbsp;= "digital"<br>
+                &lt;/div&gt;
 
             </div>
 
 
+            <!-- WORD -->
 
-            <!-- ÍCONES OFFICE -->
-
-            <div class="floating-app word">
-
-                W
-
+            <div class="floating-card one">
+                Word
             </div>
 
 
-            <div class="floating-app excel">
+            <!-- EXCEL -->
 
-                X
-
+            <div class="floating-card two">
+                Excel
             </div>
 
 
-            <div class="floating-app powerpoint">
+            <!-- POWERPOINT -->
 
-                P
-
-            </div>
-
-
-
-            <!-- DASHBOARD -->
-
-            <div class="dashboard-card">
-
-                <div class="dashboard-header">
-
-                    <div class="dashboard-dots">
-
-                        <span></span>
-                        <span></span>
-                        <span></span>
-
-                    </div>
-
-                    <small>
-                        DATA ANALYTICS
-                    </small>
-
-                </div>
-
-
-                <div class="dashboard-chart">
-
-                    <div
-                        class="bar"
-                        style="height:45%">
-                    </div>
-
-                    <div
-                        class="bar"
-                        style="height:65%">
-                    </div>
-
-                    <div
-                        class="bar"
-                        style="height:55%">
-                    </div>
-
-                    <div
-                        class="bar"
-                        style="height:80%">
-                    </div>
-
-                    <div
-                        class="bar"
-                        style="height:92%">
-                    </div>
-
-                </div>
-
-
-                <div class="dashboard-number">
-
-                    <strong>
-                        +48%
-                    </strong>
-
-                    <span>
-                        desempenho
-                    </span>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- ELEMENTO CENTRAL -->
-
-            <div class="hero-device">
-
-                <div class="device-screen">
-
-                    <div class="device-person">
-
-                        N
-
-                    </div>
-
-                    <div class="device-lines">
-
-                        <span></span>
-                        <span></span>
-                        <span></span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="device-base"></div>
-
-            </div>
-
-
-
-            <!-- FRASE -->
-
-            <div class="idea-message">
-
-                A sua ideia
-
-                <br>
-
-                é o nosso
-
-                <strong>
-                    projecto!
-                </strong>
-
+            <div class="floating-card three">
+                PowerPoint
             </div>
 
         </div>
@@ -473,7 +319,7 @@
      SERVIÇOS
 ===================================================== -->
 
-<section class="services-section"
+<section class="section"
          id="servicos">
 
     <div class="container">
@@ -481,9 +327,9 @@
 
         <div class="section-heading">
 
-            <span class="section-label">
+            <div class="eyebrow">
                 OS NOSSOS SERVIÇOS
-            </span>
+            </div>
 
             <h2>
                 O que podemos fazer por si?
@@ -501,184 +347,106 @@
         <div class="services-grid">
 
 
-            <!-- SERVIÇO 1 -->
+            <!-- 01 -->
 
             <article class="service-card">
 
-                <div class="service-icon blue">
+                <div class="service-icon">
                     &lt;/&gt;
                 </div>
 
-                <span class="service-number">
-                    01
-                </span>
-
                 <h3>
-                    Desenvolvimento Web
-                    & Programação
+                    Desenvolvimento Web & Programação
                 </h3>
 
                 <p>
-
-                    Criamos websites,
-                    landing pages e soluções
-                    web modernas e responsivas.
-
+                    Criamos websites, landing pages
+                    e soluções web modernas e responsivas.
                 </p>
-
-                <a href="desenvolvimento-web.html">
-
-                    Explorar serviço
-
-                    <span>→</span>
-
-                </a>
 
             </article>
 
 
 
-            <!-- SERVIÇO 2 -->
+            <!-- 02 -->
 
             <article class="service-card">
 
-                <div class="service-icon green">
+                <div class="service-icon">
                     ▦
                 </div>
-
-                <span class="service-number">
-                    02
-                </span>
 
                 <h3>
                     Dados & Escritório
                 </h3>
 
                 <p>
-
-                    Excel, Data Entry,
-                    organização de dados
-                    e Microsoft Office.
-
+                    Excel, Data Entry, organização de
+                    dados e Microsoft Office.
                 </p>
-
-                <a href="servicos.html">
-
-                    Explorar serviço
-
-                    <span>→</span>
-
-                </a>
 
             </article>
 
 
 
-            <!-- SERVIÇO 3 -->
+            <!-- 03 -->
 
             <article class="service-card">
 
-                <div class="service-icon purple">
+                <div class="service-icon">
                     ▤
                 </div>
 
-                <span class="service-number">
-                    03
-                </span>
-
                 <h3>
-                    Documentos
-                    Profissionais
+                    Documentos Profissionais
                 </h3>
 
                 <p>
-
-                    CVs, cartas,
-                    documentos académicos
+                    CVs, cartas, documentos académicos
                     e formatação profissional.
-
                 </p>
-
-                <a href="servicos.html">
-
-                    Explorar serviço
-
-                    <span>→</span>
-
-                </a>
 
             </article>
 
 
 
-            <!-- SERVIÇO 4 -->
+            <!-- 04 -->
 
             <article class="service-card">
 
-                <div class="service-icon violet">
+                <div class="service-icon">
                     ♙
                 </div>
-
-                <span class="service-number">
-                    04
-                </span>
 
                 <h3>
                     Assistência Virtual
                 </h3>
 
                 <p>
-
-                    Pesquisa, organização,
-                    administração e
-                    suporte remoto.
-
+                    Pesquisa, organização, administração
+                    e suporte remoto.
                 </p>
-
-                <a href="servicos.html">
-
-                    Explorar serviço
-
-                    <span>→</span>
-
-                </a>
 
             </article>
 
 
 
-            <!-- SERVIÇO 5 -->
+            <!-- 05 -->
 
             <article class="service-card">
 
-                <div class="service-icon orange">
+                <div class="service-icon">
                     ✦
                 </div>
 
-                <span class="service-number">
-                    05
-                </span>
-
                 <h3>
-                    Design & Conteúdo
-                    Digital
+                    Design & Conteúdo Digital
                 </h3>
 
                 <p>
-
-                    Apresentações,
-                    conteúdos e materiais
+                    Apresentações, conteúdos e materiais
                     digitais.
-
                 </p>
-
-                <a href="servicos.html">
-
-                    Explorar serviço
-
-                    <span>→</span>
-
-                </a>
 
             </article>
 
@@ -691,145 +459,143 @@
 
 
 <!-- =====================================================
-     ESCOLHA O SERVIÇO
+     SOLUÇÕES
 ===================================================== -->
 
-<section class="solution-section">
+<section class="section section-light">
 
     <div class="container">
 
+        <div class="section-heading">
 
-        <div class="solution-heading">
-
-            <span>
+            <div class="eyebrow">
                 ENCONTRE A SOLUÇÃO
-            </span>
+            </div>
 
             <h2>
                 O que precisa de resolver hoje?
             </h2>
 
             <p>
-                Escolha a opção que melhor
-                descreve aquilo que procura.
+                Escolha a opção que melhor descreve
+                aquilo que procura.
             </p>
 
         </div>
-
 
 
         <div class="solution-grid">
 
 
             <a href="desenvolvimento-web.html"
-               class="solution-card">
+               class="service-card">
 
-                <div class="solution-icon">
+                <div class="service-icon">
                     &lt;/&gt;
                 </div>
 
-                <strong>
+                <h3>
                     Preciso de um website
-                </strong>
+                </h3>
 
-                <small>
+                <p>
                     Desenvolvimento Web →
-                </small>
+                </p>
 
             </a>
 
 
 
             <a href="servicos.html"
-               class="solution-card">
+               class="service-card">
 
-                <div class="solution-icon green">
+                <div class="service-icon">
                     ▦
                 </div>
 
-                <strong>
+                <h3>
                     Organizar os meus dados
-                </strong>
+                </h3>
 
-                <small>
+                <p>
                     Data Entry / Excel →
-                </small>
+                </p>
 
             </a>
 
 
 
             <a href="servicos.html"
-               class="solution-card">
+               class="service-card">
 
-                <div class="solution-icon purple">
+                <div class="service-icon">
                     ▤
                 </div>
 
-                <strong>
+                <h3>
                     Um documento profissional
-                </strong>
+                </h3>
 
-                <small>
+                <p>
                     Word / PDF →
-                </small>
+                </p>
 
             </a>
 
 
 
             <a href="servicos.html"
-               class="solution-card">
+               class="service-card">
 
-                <div class="solution-icon orange">
+                <div class="service-icon">
                     ▣
                 </div>
 
-                <strong>
+                <h3>
                     Uma apresentação
-                </strong>
+                </h3>
 
-                <small>
+                <p>
                     PowerPoint →
-                </small>
+                </p>
 
             </a>
 
 
 
             <a href="servicos.html"
-               class="solution-card">
+               class="service-card">
 
-                <div class="solution-icon cyan">
+                <div class="service-icon">
                     ♙
                 </div>
 
-                <strong>
+                <h3>
                     Ajuda administrativa
-                </strong>
+                </h3>
 
-                <small>
+                <p>
                     Assistência Virtual →
-                </small>
+                </p>
 
             </a>
 
 
 
             <a href="contacto.html"
-               class="solution-card">
+               class="service-card">
 
-                <div class="solution-icon pink">
+                <div class="service-icon">
                     ◌
                 </div>
 
-                <strong>
+                <h3>
                     Outra necessidade
-                </strong>
+                </h3>
 
-                <small>
+                <p>
                     Falar connosco →
-                </small>
+                </p>
 
             </a>
 
@@ -845,7 +611,7 @@
      PORTFÓLIO
 ===================================================== -->
 
-<section class="portfolio-section"
+<section class="section"
          id="portfolio">
 
     <div class="container">
@@ -853,9 +619,9 @@
 
         <div class="section-heading">
 
-            <span class="section-label">
+            <div class="eyebrow">
                 PORTFÓLIO
-            </span>
+            </div>
 
             <h2>
                 Projectos que falam por si.
@@ -873,21 +639,19 @@
         <div class="portfolio-grid">
 
 
+            <!-- WEBSITE -->
+
             <article class="portfolio-card">
 
-                <div class="portfolio-preview website-preview">
+                <div class="portfolio-image">
 
-                    <span>
+                    <strong>
                         &lt; WEBSITE /&gt;
-                    </span>
+                    </strong>
 
                 </div>
 
                 <div class="portfolio-content">
-
-                    <small>
-                        DESENVOLVIMENTO WEB
-                    </small>
 
                     <h3>
                         Website Institucional
@@ -899,43 +663,25 @@
                         de uma empresa.
                     </p>
 
-                    <div class="portfolio-tags">
-
-                        <span>
-                            HTML
-                        </span>
-
-                        <span>
-                            CSS
-                        </span>
-
-                        <span>
-                            JavaScript
-                        </span>
-
-                    </div>
-
                 </div>
 
             </article>
 
 
 
+            <!-- POWERPOINT -->
+
             <article class="portfolio-card">
 
-                <div class="portfolio-preview powerpoint-preview">
+                <div class="portfolio-image">
 
-                    <span>
+                    <strong>
                         PRESENTATION
-                    </span>
+                    </strong>
 
                 </div>
 
                 <div class="portfolio-content">
-
-                    <small>
-                        POWERPOINT
-                    </small>
 
                     <h3>
                         Apresentação Profissional
@@ -947,39 +693,25 @@
                         apresentação profissional.
                     </p>
 
-                    <div class="portfolio-tags">
-
-                        <span>
-                            PowerPoint
-                        </span>
-
-                        <span>
-                            Design
-                        </span>
-
-                    </div>
-
                 </div>
 
             </article>
 
 
 
+            <!-- EXCEL -->
+
             <article class="portfolio-card">
 
-                <div class="portfolio-preview excel-preview">
+                <div class="portfolio-image">
 
-                    <span>
+                    <strong>
                         EXCEL
-                    </span>
+                    </strong>
 
                 </div>
 
                 <div class="portfolio-content">
-
-                    <small>
-                        DADOS & EXCEL
-                    </small>
 
                     <h3>
                         Dashboard de Dados
@@ -987,39 +719,12 @@
 
                     <p>
                         Organização e apresentação
-                        visual de dados utilizando
-                        Excel.
+                        visual de dados utilizando Excel.
                     </p>
-
-                    <div class="portifolio-tags">
-
-                        <span>
-                            Excel
-                        </span>
-
-                        <span>
-                            Data
-                        </span>
-
-                    </div>
 
                 </div>
 
             </article>
-
-        </div>
-
-
-        <div class="center-button">
-
-            <a href="portifolio.html"
-               class="outline-button">
-
-                Ver todo o portfólio
-
-                <span>→</span>
-
-            </a>
 
         </div>
 
@@ -1033,43 +738,23 @@
      SOBRE
 ===================================================== -->
 
-<section class="about-section"
+<section class="section section-light"
          id="sobre">
 
     <div class="container about-grid">
 
 
-        <div class="about-visual">
+        <div class="about-image">
 
-            <div class="about-screen">
+            <div class="about-image-content">
 
-                <div class="screen-header">
+                <strong>
+                    N
+                </strong>
 
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
-                </div>
-
-                <div class="screen-code">
-
-                    <span>&lt;solution&gt;</span>
-
-                    <span>
-                        digital_services
-                    </span>
-
-                    <span>
-                        creative_ideas
-                    </span>
-
-                    <span>
-                        professional_results
-                    </span>
-
-                    <span>&lt;/solution&gt;</span>
-
-                </div>
+                <span>
+                    Neusa Digital Services
+                </span>
 
             </div>
 
@@ -1077,11 +762,11 @@
 
 
 
-        <div class="about-text">
+        <div class="about-content">
 
-            <span class="section-label light-label">
+            <div class="eyebrow">
                 SOBRE NÓS
-            </span>
+            </div>
 
             <h2>
                 Mais do que serviços,
@@ -1108,121 +793,6 @@
 
             </p>
 
-            <a href="sobre.html"
-               class="primary-button">
-
-                Conhecer a Neusa Digital
-
-                <span>→</span>
-
-            </a>
-
-        </div>
-
-
-
-        <div class="why-us">
-
-            <span class="section-label light-label">
-                POR QUE TRABALHAR CONNOSCO?
-            </span>
-
-
-            <div class="why-grid">
-
-
-                <div class="why-item">
-
-                    <div class="why-icon">
-                        ✦
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Precisão
-                        </strong>
-
-                        <small>
-                            Atenção aos detalhes
-                            em cada projecto.
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="why-item">
-
-                    <div class="why-icon">
-                        ◌
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Comunicação
-                        </strong>
-
-                        <small>
-                            Mantemos o cliente
-                            informado.
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="why-item">
-
-                    <div class="why-icon">
-                        ◷
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Prazo
-                        </strong>
-
-                        <small>
-                            Respeitamos os prazos
-                            acordados.
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="why-item">
-
-                    <div class="why-icon">
-                        ◇
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Soluções
-                        </strong>
-
-                        <small>
-                            Cada trabalho é
-                            adaptado à necessidade.
-                        </small>
-
-                    </div>
-
-                </div>
-
-            </div>
-
         </div>
 
     </div>
@@ -1235,7 +805,7 @@
      PROCESSO
 ===================================================== -->
 
-<section class="process-section"
+<section class="section"
          id="processo">
 
     <div class="container">
@@ -1243,9 +813,9 @@
 
         <div class="section-heading">
 
-            <span class="section-label">
+            <div class="eyebrow">
                 COMO FUNCIONA
-            </span>
+            </div>
 
             <h2>
                 Um processo simples e eficiente.
@@ -1262,95 +832,72 @@
         <div class="process-grid">
 
 
-            <div class="process-item">
+            <div class="process-card">
 
-                <span class="process-number">
+                <div class="process-number">
                     01
-                </span>
+                </div>
 
                 <h3>
                     Pedido
                 </h3>
 
                 <p>
-                    Explique aquilo
-                    que precisa.
+                    Explique aquilo que precisa.
                 </p>
 
             </div>
 
 
 
-            <div class="process-item">
+            <div class="process-card">
 
-                <span class="process-number">
+                <div class="process-number">
                     02
-                </span>
+                </div>
 
                 <h3>
                     Análise
                 </h3>
 
                 <p>
-                    Analisamos a
-                    sua necessidade.
+                    Analisamos a sua necessidade.
                 </p>
 
             </div>
 
 
 
-            <div class="process-item">
+            <div class="process-card">
 
-                <span class="process-number">
+                <div class="process-number">
                     03
-                </span>
+                </div>
 
                 <h3>
                     Proposta
                 </h3>
 
                 <p>
-                    Apresentamos
-                    serviço e orçamento.
+                    Apresentamos serviço e orçamento.
                 </p>
 
             </div>
 
 
 
-            <div class="process-item">
+            <div class="process-card">
 
-                <span class="process-number">
+                <div class="process-number">
                     04
-                </span>
+                </div>
 
                 <h3>
                     Execução
                 </h3>
 
                 <p>
-                    Desenvolvemos
-                    o trabalho.
-                </p>
-
-            </div>
-
-
-
-            <div class="process-item">
-
-                <span class="process-number">
-                    05
-                </span>
-
-                <h3>
-                    Entrega
-                </h3>
-
-                <p>
-                    Receba o resultado
-                    final.
+                    Desenvolvemos o trabalho.
                 </p>
 
             </div>
@@ -1367,17 +914,17 @@
      PREÇOS
 ===================================================== -->
 
-<section class="pricing-section"
+<section class="section section-light"
          id="precos">
 
-    <div class="container pricing-grid">
+    <div class="container">
 
 
-        <div class="pricing-intro">
+        <div class="section-heading">
 
-            <span>
+            <div class="eyebrow">
                 PREÇOS INICIAIS
-            </span>
+            </div>
 
             <h2>
                 Serviços personalizados.
@@ -1392,129 +939,113 @@
 
             </p>
 
-            <a href="contacto.html"
-               class="white-button">
-
-                Solicitar orçamento
-
-                <span>↗</span>
-
-            </a>
-
         </div>
 
 
 
-        <div class="price-list">
+        <div class="pricing-grid">
 
 
-            <div class="price-item">
+            <div class="pricing-card">
 
-                <span>
+                <h3>
                     Formatação Word
-                </span>
+                </h3>
 
-                <strong>
-                    desde 300 MT
-                </strong>
+                <div class="price">
+                    300 MT
+                    <small>
+                        desde
+                    </small>
+                </div>
+
+                <ul class="pricing-list">
+
+                    <li>
+                        Formatação profissional
+                    </li>
+
+                    <li>
+                        Organização do documento
+                    </li>
+
+                </ul>
+
+                <a href="contacto.html"
+                   class="btn btn-primary">
+
+                    Solicitar
+
+                </a>
 
             </div>
 
 
 
-            <div class="price-item">
+            <div class="pricing-card featured">
 
-                <span>
+                <h3>
                     CV Profissional
-                </span>
+                </h3>
 
-                <strong>
-                    desde 500 MT
-                </strong>
+                <div class="price">
+                    500 MT
+                    <small>
+                        desde
+                    </small>
+                </div>
 
-            </div>
+                <ul class="pricing-list">
 
+                    <li>
+                        Estrutura profissional
+                    </li>
 
+                    <li>
+                        Apresentação moderna
+                    </li>
 
-            <div class="price-item">
+                </ul>
 
-                <span>
-                    PowerPoint
-                </span>
+                <a href="contacto.html"
+                   class="btn btn-primary">
 
-                <strong>
-                    desde 500 MT
-                </strong>
+                    Solicitar
 
-            </div>
-
-
-
-            <div class="price-item">
-
-                <span>
-                    Data Entry
-                </span>
-
-                <strong>
-                    desde 300 MT
-                </strong>
+                </a>
 
             </div>
 
 
 
-            <div class="price-item">
+            <div class="pricing-card">
 
-                <span>
-                    Excel
-                </span>
-
-                <strong>
-                    desde 500 MT
-                </strong>
-
-            </div>
-
-
-
-            <div class="price-item">
-
-                <span>
-                    Assistência Virtual
-                </span>
-
-                <strong>
-                    Sob orçamento
-                </strong>
-
-            </div>
-
-
-
-            <div class="price-item">
-
-                <span>
+                <h3>
                     Desenvolvimento Web
-                </span>
+                </h3>
 
-                <strong>
+                <div class="price">
                     Sob orçamento
-                </strong>
+                </div>
 
-            </div>
+                <ul class="pricing-list">
 
+                    <li>
+                        Website responsivo
+                    </li>
 
+                    <li>
+                        Solução personalizada
+                    </li>
 
-            <div class="price-item">
+                </ul>
 
-                <span>
-                    Sistemas Web
-                </span>
+                <a href="contacto.html"
+                   class="btn btn-primary">
 
-                <strong>
-                    Sob orçamento
-                </strong>
+                    Solicitar
+
+                </a>
 
             </div>
 
@@ -1530,32 +1061,32 @@
      CTA
 ===================================================== -->
 
-<section class="final-cta">
+<section class="cta">
 
     <div class="container">
 
-        <span>
-            TEM UM PROJECTO EM MENTE?
-        </span>
+        <div class="cta-box">
 
-        <h2>
-            Vamos transformar a sua ideia
-            em realidade.
-        </h2>
+            <h2>
+                Vamos transformar a sua ideia
+                em realidade.
+            </h2>
 
-        <p>
-            Conte-nos o que precisa
-            e encontraremos a solução.
-        </p>
+            <p>
+                Conte-nos o que precisa
+                e encontraremos a solução.
+            </p>
 
-        <a href="contacto.html"
-           class="primary-button">
+            <a href="contacto.html"
+               class="btn">
 
-            Começar um projecto
+                Começar um projecto
 
-            <span>↗</span>
+                <span>↗</span>
 
-        </a>
+            </a>
+
+        </div>
 
     </div>
 
@@ -1567,7 +1098,7 @@
      FOOTER
 ===================================================== -->
 
-<footer class="footer">
+<footer class="site-footer">
 
     <div class="container footer-grid">
 
@@ -1579,20 +1110,13 @@
             <a href="index.html"
                class="logo">
 
-                <div class="logo-symbol">
+                <div class="logo-mark">
                     N
                 </div>
 
-                <div class="logo-text">
-
-                    <strong>
-                        NEUSA DIGITAL
-                    </strong>
-
-                    <span>
-                        SERVICES
-                    </span>
-
+                <div>
+                    <strong>NEUSA DIGITAL</strong>
+                    <span>SERVICES</span>
                 </div>
 
             </a>
@@ -1606,13 +1130,13 @@
 
 
 
-        <!-- LINKS -->
+        <!-- NAVEGAÇÃO -->
 
         <div class="footer-column">
 
-            <h4>
+            <h3>
                 Navegação
-            </h4>
+            </h3>
 
             <a href="index.html">
                 Início
@@ -1638,9 +1162,9 @@
 
         <div class="footer-column">
 
-            <h4>
+            <h3>
                 Serviços
-            </h4>
+            </h3>
 
             <a href="desenvolvimento-web.html">
                 Desenvolvimento Web
@@ -1666,23 +1190,21 @@
 
         <div class="footer-column">
 
-            <h4>
+            <h3>
                 Contacto
-            </h4>
+            </h3>
 
             <a href="mailto:neusamahilene@gmail.com">
-
                 neusamahilene@gmail.com
-
             </a>
 
             <a href="https://wa.me/258852363012?text=Ol%C3%A1!%20Encontrei%20a%20Neusa%20Digital%20Services%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os."
-   target="_blank"
-   rel="noopener noreferrer">
+               target="_blank"
+               rel="noopener noreferrer">
 
-    WhatsApp
+                WhatsApp
 
-</a>
+            </a>
 
             <span>
                 Moçambique
@@ -1690,22 +1212,18 @@
 
         </div>
 
-
     </div>
 
+
+
+    <!-- COPYRIGHT -->
 
     <div class="footer-bottom">
 
         <div class="container">
 
-            <span>
-                © 2026 Neusa Digital Services.
-                Todos os direitos reservados.
-            </span>
-
-            <span>
-                Digital Solutions. Professional Results.
-            </span>
+            © 2026 Neusa Digital Services.
+            Todos os direitos reservados.
 
         </div>
 
@@ -1715,9 +1233,7 @@
 
 
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
+<!-- JAVASCRIPT -->
 
 <script src="script.js"></script>
 
