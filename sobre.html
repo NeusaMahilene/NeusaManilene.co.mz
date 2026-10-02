@@ -1,0 +1,2068 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sobre Nós | Neusa Digital Services</title>
+
+    <meta name="description"
+        content="Conheça a Neusa Digital Services, os seus valores, missão, visão, competências e forma de trabalhar. Soluções digitais profissionais em Moçambique.">
+
+    <meta name="keywords"
+        content="Neusa Digital Services, sobre nós, serviços digitais, programação, desenvolvimento web, Moçambique">
+
+    <meta name="author" content="Neusa Digital Services">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+
+        /* =====================================================
+           SOBRE — BASE
+        ===================================================== */
+
+        .about-page {
+            background: #f8fafc;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .about-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 155px 0 105px;
+            background:
+                radial-gradient(
+                    circle at 12% 25%,
+                    rgba(37, 99, 235, .13),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 88% 25%,
+                    rgba(6, 182, 212, .10),
+                    transparent 28%
+                ),
+                #ffffff;
+        }
+
+        .about-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background-image:
+                linear-gradient(
+                    rgba(37,99,235,.035) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(37,99,235,.035) 1px,
+                    transparent 1px
+                );
+
+            background-size: 50px 50px;
+            pointer-events: none;
+        }
+
+        .about-hero-content {
+            position: relative;
+            z-index: 1;
+
+            max-width: 900px;
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .about-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 8px 14px;
+            margin-bottom: 22px;
+
+            border: 1px solid #dbeafe;
+            border-radius: 999px;
+
+            background: #eff6ff;
+            color: #2563eb;
+
+            font-size: .78rem;
+            font-weight: 800;
+
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .about-badge span {
+            width: 7px;
+            height: 7px;
+
+            border-radius: 50%;
+            background: #2563eb;
+        }
+
+        .about-hero h1 {
+            max-width: 850px;
+
+            margin: 0 auto 22px;
+
+            color: #0f172a;
+
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(2.6rem, 5vw, 4.7rem);
+
+            line-height: 1.03;
+            letter-spacing: -.05em;
+        }
+
+        .about-hero h1 span {
+            color: #2563eb;
+        }
+
+        .about-hero p {
+            max-width: 700px;
+
+            margin: auto;
+
+            color: #64748b;
+
+            font-size: 1.06rem;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .about-intro {
+            padding: 100px 0;
+
+            background: #ffffff;
+        }
+
+        .about-intro-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+        .about-label {
+            display: block;
+
+            margin-bottom: 14px;
+
+            color: #2563eb;
+
+            font-size: .76rem;
+            font-weight: 800;
+
+            letter-spacing: .12em;
+
+            text-transform: uppercase;
+        }
+
+        .about-intro h2 {
+            margin: 0 0 22px;
+
+            color: #0f172a;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: clamp(2rem, 3.5vw, 3.2rem);
+
+            line-height: 1.08;
+
+            letter-spacing: -.04em;
+        }
+
+        .about-intro p {
+            margin: 0 0 17px;
+
+            color: #64748b;
+
+            font-size: .98rem;
+
+            line-height: 1.85;
+        }
+
+
+        /* =====================================================
+           BRAND CARD
+        ===================================================== */
+
+        .brand-card {
+            position: relative;
+
+            min-height: 420px;
+
+            overflow: hidden;
+
+            padding: 45px;
+
+            border-radius: 30px;
+
+            background:
+                radial-gradient(
+                    circle at 80% 15%,
+                    rgba(96,165,250,.25),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #172554
+                );
+
+            box-shadow:
+                0 30px 70px rgba(15,23,42,.15);
+        }
+
+        .brand-card::after {
+            content: "N";
+
+            position: absolute;
+
+            right: -30px;
+            bottom: -100px;
+
+            color: rgba(255,255,255,.035);
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 22rem;
+            font-weight: 700;
+
+            line-height: 1;
+        }
+
+        .brand-symbol {
+            position: relative;
+            z-index: 2;
+
+            width: 70px;
+            height: 70px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 55px;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #06b6d4
+                );
+
+            color: #ffffff;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 2rem;
+            font-weight: 700;
+
+            box-shadow:
+                0 15px 35px rgba(37,99,235,.35);
+        }
+
+        .brand-card h3 {
+            position: relative;
+            z-index: 2;
+
+            margin: 0 0 12px;
+
+            color: #ffffff;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 2rem;
+        }
+
+        .brand-card p {
+            position: relative;
+            z-index: 2;
+
+            max-width: 420px;
+
+            margin: 0;
+
+            color: #cbd5e1;
+
+            line-height: 1.8;
+        }
+
+        .brand-tagline {
+            position: absolute;
+
+            left: 45px;
+            bottom: 40px;
+
+            z-index: 2;
+
+            color: #93c5fd;
+
+            font-size: .75rem;
+            font-weight: 800;
+
+            letter-spacing: .12em;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =====================================================
+           MISSION / VISION
+        ===================================================== */
+
+        .mission-section {
+            padding: 100px 0;
+
+            background: #f8fafc;
+        }
+
+        .section-heading {
+            max-width: 700px;
+
+            margin: 0 auto 55px;
+
+            text-align: center;
+        }
+
+        .section-heading h2 {
+            margin: 0 0 15px;
+
+            color: #0f172a;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: clamp(2rem, 3.5vw, 3rem);
+
+            line-height: 1.1;
+
+            letter-spacing: -.04em;
+        }
+
+        .section-heading p {
+            margin: 0;
+
+            color: #64748b;
+
+            line-height: 1.8;
+        }
+
+        .mission-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+        .mission-card {
+            position: relative;
+
+            padding: 40px;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 22px;
+
+            background: #ffffff;
+
+            transition: .3s ease;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-5px);
+
+            border-color: #bfdbfe;
+
+            box-shadow:
+                0 20px 50px rgba(15,23,42,.08);
+        }
+
+        .mission-icon {
+            width: 52px;
+            height: 52px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 25px;
+
+            border-radius: 15px;
+
+            background: #eff6ff;
+
+            color: #2563eb;
+
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+
+        .mission-card h3 {
+            margin: 0 0 12px;
+
+            color: #0f172a;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 1.4rem;
+        }
+
+        .mission-card p {
+            margin: 0;
+
+            color: #64748b;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           VALUES
+        ===================================================== */
+
+        .values-section {
+            padding: 105px 0;
+
+            background: #ffffff;
+        }
+
+        .values-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 18px;
+        }
+
+        .value-card {
+            padding: 30px 25px;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 20px;
+
+            background: #ffffff;
+
+            transition: .3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+
+            border-color: #bfdbfe;
+
+            box-shadow:
+                0 18px 40px rgba(15,23,42,.07);
+        }
+
+        .value-number {
+            display: block;
+
+            margin-bottom: 22px;
+
+            color: #bfdbfe;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 1.7rem;
+            font-weight: 700;
+        }
+
+        .value-card h3 {
+            margin: 0 0 10px;
+
+            color: #0f172a;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 1.05rem;
+        }
+
+        .value-card p {
+            margin: 0;
+
+            color: #64748b;
+
+            font-size: .85rem;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           DIFERENCIAL
+        ===================================================== */
+
+        .difference-section {
+            padding: 105px 0;
+
+            background: #f8fafc;
+        }
+
+        .difference-grid {
+            display: grid;
+
+            grid-template-columns: .9fr 1.1fr;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+        .difference-text h2 {
+            margin: 0 0 20px;
+
+            color: #0f172a;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: clamp(2rem, 3.5vw, 3.1rem);
+
+            line-height: 1.08;
+
+            letter-spacing: -.04em;
+        }
+
+        .difference-text > p {
+            margin: 0;
+
+            color: #64748b;
+
+            line-height: 1.85;
+        }
+
+        .difference-list {
+            display: grid;
+
+            gap: 15px;
+        }
+
+        .difference-item {
+            display: grid;
+
+            grid-template-columns: 46px 1fr;
+
+            gap: 15px;
+
+            padding: 20px;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 16px;
+
+            background: #ffffff;
+        }
+
+        .difference-check {
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background: #eff6ff;
+
+            color: #2563eb;
+
+            font-weight: 800;
+        }
+
+        .difference-item h3 {
+            margin: 0 0 5px;
+
+            color: #0f172a;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 1rem;
+        }
+
+        .difference-item p {
+            margin: 0;
+
+            color: #64748b;
+
+            font-size: .84rem;
+
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           ÁREAS DE COMPETÊNCIA
+        ===================================================== */
+
+        .skills-section {
+            padding: 105px 0;
+
+            background: #ffffff;
+        }
+
+        .skills-layout {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .skills-content h2 {
+            margin: 0 0 18px;
+
+            color: #0f172a;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: clamp(2rem, 3.2vw, 2.9rem);
+
+            line-height: 1.1;
+        }
+
+        .skills-content > p {
+            margin: 0 0 28px;
+
+            color: #64748b;
+
+            line-height: 1.8;
+        }
+
+        .skills-list {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 10px;
+        }
+
+        .skill {
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            padding: 12px 14px;
+
+            border-radius: 10px;
+
+            background: #f8fafc;
+
+            color: #475569;
+
+            font-size: .82rem;
+
+            font-weight: 700;
+        }
+
+        .skill::before {
+            content: "✓";
+
+            color: #2563eb;
+
+            font-weight: 900;
+        }
+
+        .skills-visual {
+            position: relative;
+
+            min-height: 390px;
+
+            overflow: hidden;
+
+            border-radius: 28px;
+
+            background:
+                radial-gradient(
+                    circle at 70% 20%,
+                    rgba(96,165,250,.25),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #172554
+                );
+        }
+
+        .skills-window {
+            position: absolute;
+
+            top: 65px;
+            left: 10%;
+
+            width: 80%;
+
+            padding: 25px;
+
+            border: 1px solid rgba(255,255,255,.1);
+
+            border-radius: 18px;
+
+            background: rgba(255,255,255,.96);
+
+            box-shadow:
+                0 30px 60px rgba(0,0,0,.25);
+        }
+
+        .skills-window-title {
+            width: 110px;
+            height: 11px;
+
+            margin-bottom: 25px;
+
+            border-radius: 5px;
+
+            background: #0f172a;
+        }
+
+        .skill-row {
+            display: grid;
+
+            grid-template-columns: 120px 1fr;
+
+            gap: 15px;
+
+            align-items: center;
+
+            margin-bottom: 16px;
+        }
+
+        .skill-name {
+            height: 8px;
+
+            border-radius: 5px;
+
+            background: #64748b;
+        }
+
+        .skill-bar {
+            height: 8px;
+
+            overflow: hidden;
+
+            border-radius: 10px;
+
+            background: #dbeafe;
+        }
+
+        .skill-bar span {
+            display: block;
+
+            height: 100%;
+
+            border-radius: inherit;
+
+            background: #2563eb;
+        }
+
+        .skill-row:nth-child(3) .skill-bar span {
+            width: 90%;
+        }
+
+        .skill-row:nth-child(4) .skill-bar span {
+            width: 78%;
+        }
+
+        .skill-row:nth-child(5) .skill-bar span {
+            width: 70%;
+        }
+
+        .skill-row:nth-child(6) .skill-bar span {
+            width: 85%;
+        }
+
+
+        /* =====================================================
+           PROCESS
+        ===================================================== */
+
+        .approach-section {
+            padding: 105px 0;
+
+            background: #f8fafc;
+        }
+
+        .approach-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4,1fr);
+
+            gap: 18px;
+        }
+
+        .approach-card {
+            padding: 30px 24px;
+
+            border-radius: 20px;
+
+            background: #ffffff;
+
+            border: 1px solid #e2e8f0;
+        }
+
+        .approach-number {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            width: 38px;
+            height: 38px;
+
+            margin-bottom: 20px;
+
+            border-radius: 11px;
+
+            background: #2563eb;
+
+            color: #fff;
+
+            font-size: .78rem;
+            font-weight: 800;
+        }
+
+        .approach-card h3 {
+            margin: 0 0 9px;
+
+            color: #0f172a;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 1rem;
+        }
+
+        .approach-card p {
+            margin: 0;
+
+            color: #64748b;
+
+            font-size: .82rem;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .about-cta {
+            padding: 105px 0;
+
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at 20% 30%,
+                    rgba(37,99,235,.12),
+                    transparent 30%
+                ),
+                #ffffff;
+        }
+
+        .about-cta h2 {
+            max-width: 750px;
+
+            margin: 0 auto 17px;
+
+            color: #0f172a;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: clamp(2rem,4vw,3.3rem);
+
+            line-height: 1.08;
+
+            letter-spacing: -.04em;
+        }
+
+        .about-cta p {
+            max-width: 620px;
+
+            margin: 0 auto 30px;
+
+            color: #64748b;
+
+            line-height: 1.8;
+        }
+
+        .about-cta-buttons {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width: 950px) {
+
+            .values-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .approach-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .difference-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+        }
+
+
+        @media(max-width: 780px) {
+
+            .about-hero {
+                padding: 125px 0 75px;
+            }
+
+            .about-intro-grid,
+            .skills-layout {
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+            .mission-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .brand-card {
+                min-height: 370px;
+            }
+
+            .skills-visual {
+                min-height: 330px;
+            }
+
+        }
+
+
+        @media(max-width: 520px) {
+
+            .about-hero h1 {
+                font-size: 2.45rem;
+            }
+
+            .brand-card {
+                padding: 30px;
+            }
+
+            .brand-tagline {
+                left: 30px;
+                bottom: 30px;
+            }
+
+            .values-grid,
+            .approach-grid,
+            .skills-list {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-card {
+                padding: 30px 25px;
+            }
+
+            .skill-row {
+                grid-template-columns: 90px 1fr;
+            }
+
+            .about-cta {
+                padding: 75px 0;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body class="about-page">
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <div class="container header-content">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-symbol">N</span>
+
+            <span class="logo-text">
+                <strong>NEUSA DIGITAL</strong>
+                <small>SERVICES</small>
+            </span>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">Início</a>
+
+            <a href="servicos.html">Serviços</a>
+
+            <a href="portfolio.html">Portfólio</a>
+
+            <a href="sobre.html" class="active">
+                Sobre Nós
+            </a>
+
+            <a href="index.html#processo">
+                Como Funciona
+            </a>
+
+            <a href="index.html#precos">
+                Preços
+            </a>
+
+            <a href="contacto.html">
+                Contacto
+            </a>
+
+        </nav>
+
+
+        <a href="contacto.html" class="header-button">
+
+            Solicitar um Serviço
+
+            <span>↗</span>
+
+        </a>
+
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            type="button"
+            aria-label="Abrir menu">
+
+            ☰
+
+        </button>
+
+    </div>
+
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="index.html">Início</a>
+
+        <a href="servicos.html">Serviços</a>
+
+        <a href="portfolio.html">Portfólio</a>
+
+        <a href="sobre.html">Sobre Nós</a>
+
+        <a href="index.html#processo">
+            Como Funciona
+        </a>
+
+        <a href="index.html#precos">
+            Preços
+        </a>
+
+        <a href="contacto.html">Contacto</a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="about-hero">
+
+    <div class="container">
+
+        <div class="about-hero-content">
+
+            <div class="about-badge">
+
+                <span></span>
+
+                Quem somos
+
+            </div>
+
+
+            <h1>
+
+                Tecnologia com
+                <span>propósito.</span>
+
+            </h1>
+
+
+            <p>
+
+                A Neusa Digital Services nasceu com uma ideia simples:
+                transformar necessidades digitais em soluções práticas,
+                profissionais e acessíveis.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO / HISTÓRIA
+===================================================== -->
+
+<section class="about-intro">
+
+    <div class="container">
+
+        <div class="about-intro-grid">
+
+
+            <div>
+
+                <span class="about-label">
+                    A nossa identidade
+                </span>
+
+
+                <h2>
+                    Uma marca digital construída
+                    para resolver problemas reais.
+                </h2>
+
+
+                <p>
+
+                    A Neusa Digital Services é uma marca orientada para
+                    serviços digitais, programação, desenvolvimento web,
+                    ferramentas de produtividade, documentos profissionais
+                    e soluções para presença digital.
+
+                </p>
+
+
+                <p>
+
+                    O nosso trabalho combina tecnologia, organização,
+                    criatividade e atenção aos detalhes para transformar
+                    uma necessidade apresentada pelo cliente numa solução
+                    clara e funcional.
+
+                </p>
+
+
+                <p>
+
+                    Mais do que entregar um ficheiro, uma página ou uma
+                    ferramenta, procuramos compreender primeiro aquilo
+                    que precisa de ser resolvido.
+
+                </p>
+
+            </div>
+
+
+            <div class="brand-card">
+
+                <div class="brand-symbol">
+                    N
+                </div>
+
+
+                <h3>
+                    Neusa Digital Services
+                </h3>
+
+
+                <p>
+
+                    Soluções digitais para pessoas, profissionais,
+                    pequenos negócios, projectos e organizações que
+                    precisam de transformar ideias em resultados.
+
+                </p>
+
+
+                <span class="brand-tagline">
+                    Digital Solutions. Professional Results.
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MISSÃO / VISÃO
+===================================================== -->
+
+<section class="mission-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="about-label">
+                Direcção
+            </span>
+
+            <h2>
+                Onde queremos chegar.
+            </h2>
+
+            <p>
+
+                A nossa identidade é orientada por uma missão clara
+                e por uma visão de crescimento sustentável através
+                da tecnologia.
+
+            </p>
+
+        </div>
+
+
+        <div class="mission-grid">
+
+
+            <article class="mission-card">
+
+                <div class="mission-icon">
+                    M
+                </div>
+
+
+                <h3>
+                    Missão
+                </h3>
+
+
+                <p>
+
+                    Disponibilizar soluções e serviços digitais que
+                    ajudem pessoas, profissionais, negócios e projectos
+                    a trabalhar, comunicar e apresentar-se de forma
+                    mais organizada e profissional.
+
+                </p>
+
+            </article>
+
+
+            <article class="mission-card">
+
+                <div class="mission-icon">
+                    V
+                </div>
+
+
+                <h3>
+                    Visão
+                </h3>
+
+
+                <p>
+
+                    Construir uma marca digital reconhecida pela
+                    qualidade das suas soluções, pela capacidade de
+                    inovação e pela forma profissional como transforma
+                    necessidades em soluções.
+
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     VALORES
+===================================================== -->
+
+<section class="values-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="about-label">
+                Os nossos princípios
+            </span>
+
+            <h2>
+                Valores que orientam o trabalho.
+            </h2>
+
+            <p>
+
+                Cada projecto deve reflectir a forma como queremos
+                trabalhar e ser reconhecidos.
+
+            </p>
+
+        </div>
+
+
+        <div class="values-grid">
+
+
+            <article class="value-card">
+
+                <span class="value-number">
+                    01
+                </span>
+
+                <h3>
+                    Profissionalismo
+                </h3>
+
+                <p>
+
+                    Organização, responsabilidade e atenção aos
+                    detalhes em cada etapa do trabalho.
+
+                </p>
+
+            </article>
+
+
+            <article class="value-card">
+
+                <span class="value-number">
+                    02
+                </span>
+
+                <h3>
+                    Qualidade
+                </h3>
+
+                <p>
+
+                    Procuramos entregar soluções cuidadas, funcionais
+                    e adequadas ao objectivo definido.
+
+                </p>
+
+            </article>
+
+
+            <article class="value-card">
+
+                <span class="value-number">
+                    03
+                </span>
+
+                <h3>
+                    Inovação
+                </h3>
+
+                <p>
+
+                    Procuramos novas formas de utilizar a tecnologia
+                    para resolver necessidades concretas.
+
+                </p>
+
+            </article>
+
+
+            <article class="value-card">
+
+                <span class="value-number">
+                    04
+                </span>
+
+                <h3>
+                    Transparência
+                </h3>
+
+                <p>
+
+                    Comunicação clara sobre serviços, processos,
+                    preços e aquilo que pode ser entregue.
+
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DIFERENCIAL
+===================================================== -->
+
+<section class="difference-section">
+
+    <div class="container">
+
+        <div class="difference-grid">
+
+
+            <div class="difference-text">
+
+                <span class="about-label">
+                    A nossa abordagem
+                </span>
+
+
+                <h2>
+                    Não queremos apenas
+                    entregar. Queremos resolver.
+                </h2>
+
+
+                <p>
+
+                    Uma solução digital só é útil quando responde
+                    verdadeiramente à necessidade para a qual foi
+                    criada. Por isso, procuramos combinar simplicidade,
+                    funcionalidade e apresentação profissional.
+
+                </p>
+
+            </div>
+
+
+            <div class="difference-list">
+
+
+                <article class="difference-item">
+
+                    <div class="difference-check">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Entendemos a necessidade
+                        </h3>
+
+                        <p>
+
+                            Antes de começar, procuramos compreender
+                            o que precisa de ser feito e qual é o
+                            objectivo.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="difference-item">
+
+                    <div class="difference-check">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Pensamos na solução
+                        </h3>
+
+                        <p>
+
+                            Organizamos a informação e definimos uma
+                            abordagem adequada ao projecto.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="difference-item">
+
+                    <div class="difference-check">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Desenvolvemos com atenção
+                        </h3>
+
+                        <p>
+
+                            Trabalhamos a estrutura, apresentação,
+                            funcionalidade e experiência de utilização.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="difference-item">
+
+                    <div class="difference-check">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Entregamos uma solução utilizável
+                        </h3>
+
+                        <p>
+
+                            O objectivo é que o resultado final seja
+                            compreensível, organizado e útil.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     COMPETÊNCIAS
+===================================================== -->
+
+<section class="skills-section">
+
+    <div class="container">
+
+        <div class="skills-layout">
+
+
+            <div class="skills-content">
+
+                <span class="about-label">
+                    Competências
+                </span>
+
+
+                <h2>
+                    Um conjunto de competências
+                    para diferentes necessidades.
+                </h2>
+
+
+                <p>
+
+                    A Neusa Digital Services reúne competências em
+                    tecnologia, ferramentas digitais, documentos,
+                    produtividade e comunicação digital.
+
+                </p>
+
+
+                <div class="skills-list">
+
+                    <span class="skill">
+                        Desenvolvimento Web
+                    </span>
+
+                    <span class="skill">
+                        HTML & CSS
+                    </span>
+
+                    <span class="skill">
+                        JavaScript
+                    </span>
+
+                    <span class="skill">
+                        Microsoft Word
+                    </span>
+
+                    <span class="skill">
+                        Microsoft Excel
+                    </span>
+
+                    <span class="skill">
+                        PowerPoint
+                    </span>
+
+                    <span class="skill">
+                        Formatação
+                    </span>
+
+                    <span class="skill">
+                        Organização de dados
+                    </span>
+
+                    <span class="skill">
+                        Documentos profissionais
+                    </span>
+
+                    <span class="skill">
+                        Conteúdo digital
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skills-visual">
+
+                <div class="skills-window">
+
+                    <div class="skills-window-title"></div>
+
+
+                    <div class="skill-row">
+
+                        <span class="skill-name"></span>
+
+                        <div class="skill-bar">
+                            <span style="width:94%;"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-row">
+
+                        <span class="skill-name"></span>
+
+                        <div class="skill-bar">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-row">
+
+                        <span class="skill-name"></span>
+
+                        <div class="skill-bar">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-row">
+
+                        <span class="skill-name"></span>
+
+                        <div class="skill-bar">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill-row">
+
+                        <span class="skill-name"></span>
+
+                        <div class="skill-bar">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     COMO TRABALHAMOS
+===================================================== -->
+
+<section class="approach-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="about-label">
+                Como trabalhamos
+            </span>
+
+            <h2>
+                Do pedido à solução.
+            </h2>
+
+            <p>
+
+                Um processo simples, organizado e orientado para
+                o resultado que pretende alcançar.
+
+            </p>
+
+        </div>
+
+
+        <div class="approach-grid">
+
+
+            <article class="approach-card">
+
+                <span class="approach-number">
+                    01
+                </span>
+
+                <h3>
+                    Conversamos
+                </h3>
+
+                <p>
+
+                    Recebemos o pedido e procuramos compreender
+                    exactamente o que precisa.
+
+                </p>
+
+            </article>
+
+
+            <article class="approach-card">
+
+                <span class="approach-number">
+                    02
+                </span>
+
+                <h3>
+                    Planeamos
+                </h3>
+
+                <p>
+
+                    Organizamos a solução, os requisitos e os
+                    próximos passos do projecto.
+
+                </p>
+
+            </article>
+
+
+            <article class="approach-card">
+
+                <span class="approach-number">
+                    03
+                </span>
+
+                <h3>
+                    Desenvolvemos
+                </h3>
+
+                <p>
+
+                    Executamos o trabalho de acordo com a solução
+                    definida.
+
+                </p>
+
+            </article>
+
+
+            <article class="approach-card">
+
+                <span class="approach-number">
+                    04
+                </span>
+
+                <h3>
+                    Entregamos
+                </h3>
+
+                <p>
+
+                    Apresentamos a solução final e orientamos sobre
+                    a sua utilização quando necessário.
+
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="about-cta">
+
+    <div class="container">
+
+        <span class="about-label">
+            Vamos começar
+        </span>
+
+
+        <h2>
+            Tem uma necessidade digital?
+            Vamos encontrar a solução.
+        </h2>
+
+
+        <p>
+
+            Conte-nos o que pretende fazer. A partir daí,
+            podemos analisar a necessidade e definir o
+            próximo passo.
+
+        </p>
+
+
+        <div class="about-cta-buttons">
+
+            <a href="contacto.html" class="primary-button">
+
+                Solicitar um Serviço
+
+                <span>↗</span>
+
+            </a>
+
+
+            <a href="servicos.html" class="secondary-button">
+
+                Ver Serviços
+
+                <span>→</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+
+                    <span class="logo-symbol">
+                        N
+                    </span>
+
+                    <span class="logo-text">
+
+                        <strong>
+                            NEUSA DIGITAL
+                        </strong>
+
+                        <small>
+                            SERVICES
+                        </small>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+                    Digital Solutions. Professional Results.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Navegação
+                </h4>
+
+                <a href="index.html">
+                    Início
+                </a>
+
+                <a href="servicos.html">
+                    Serviços
+                </a>
+
+                <a href="portfolio.html">
+                    Portfólio
+                </a>
+
+                <a href="sobre.html">
+                    Sobre Nós
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Serviços
+                </h4>
+
+                <a href="desenvolvimento-web.html">
+                    Desenvolvimento Web
+                </a>
+
+                <a href="contacto.html">
+                    Informática & Office
+                </a>
+
+                <a href="contacto.html">
+                    Documentos
+                </a>
+
+                <a href="contacto.html">
+                    Serviços Académicos
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Contacto
+                </h4>
+
+                <a href="mailto:neusadigitalservices@gmail.com">
+                    neusadigitalservices@gmail.com
+                </a>
+
+                <a href="contacto.html">
+                    WhatsApp
+                </a>
+
+                <span>
+                    Moçambique
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+
+                ©
+                <span class="footer-year"></span>
+
+                Neusa Digital Services.
+                Todos os direitos reservados.
+
+            </p>
+
+
+            <p>
+                Digital Solutions. Professional Results.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

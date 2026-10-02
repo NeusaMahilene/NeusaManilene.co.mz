@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Conheça todos os serviços da Neusa Digital Services: programação, desenvolvimento web, documentos, serviços académicos, informática, dados, design, conteúdo digital e assistência virtual."
+    >
+
+    <meta
+        name="keywords"
+        content="Neusa Digital Services, programação, desenvolvimento web, informática, Excel, documentos, serviços académicos, design, assistência virtual"
+    >
+
+    <meta name="author" content="Neusa Digital Services">
+
+    <title>Serviços | Neusa Digital Services</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .services-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 150px 0 95px;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(37, 99, 235, .12), transparent 32%),
+                radial-gradient(circle at 90% 15%, rgba(6, 182, 212, .10), transparent 30%),
+                #fff;
+        }
+
+        .services-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(37, 99, 235, .035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(37, 99, 235, .035) 1px, transparent 1px);
+            background-size: 45px 45px;
+            pointer-events: none;
+        }
+
+        .services-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .services-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 15px;
+            border: 1px solid #dbeafe;
+            border-radius: 999px;
+            background: #eff6ff;
+            color: #2563eb;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .09em;
+            text-transform: uppercase;
+        }
+
+        .services-badge span {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #2563eb;
+        }
+
+        .services-hero h1 {
+            margin: 25px 0 20px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 1.02;
+            letter-spacing: -.045em;
+            color: #0f172a;
+        }
+
+        .services-hero h1 span {
+            color: #2563eb;
+        }
+
+        .services-hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #64748b;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           CATÁLOGO
+        ===================================================== */
+
+        .services-catalog {
+            padding: 105px 0;
+            background: #f8fafc;
+        }
+
+        .catalog-heading {
+            max-width: 720px;
+            margin: 0 auto 60px;
+            text-align: center;
+        }
+
+        .catalog-heading > span {
+            display: block;
+            margin-bottom: 12px;
+            color: #2563eb;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+        }
+
+        .catalog-heading h2 {
+            margin: 0 0 16px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(32px, 4vw, 48px);
+            line-height: 1.1;
+            letter-spacing: -.035em;
+            color: #0f172a;
+        }
+
+        .catalog-heading p {
+            margin: 0;
+            color: #64748b;
+            line-height: 1.75;
+        }
+
+
+        /* =====================================================
+           GRID DE SERVIÇOS
+        ===================================================== */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .service-box {
+            position: relative;
+            overflow: hidden;
+            padding: 35px;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            background: #fff;
+            transition:
+                transform .3s ease,
+                box-shadow .3s ease,
+                border-color .3s ease;
+        }
+
+        .service-box:hover {
+            transform: translateY(-7px);
+            border-color: #bfdbfe;
+            box-shadow: 0 22px 50px rgba(15, 23, 42, .08);
+        }
+
+        .service-box.featured {
+            grid-column: span 2;
+            background:
+                radial-gradient(
+                    circle at 100% 0%,
+                    rgba(37, 99, 235, .10),
+                    transparent 32%
+                ),
+                #fff;
+        }
+
+        .service-box::after {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: rgba(37, 99, 235, .035);
+            right: -90px;
+            bottom: -90px;
+            pointer-events: none;
+        }
+
+        .service-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .service-icon {
+            width: 62px;
+            height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 17px;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            box-shadow: 0 12px 25px rgba(37, 99, 235, .20);
+        }
+
+        .service-number {
+            color: #94a3b8;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .1em;
+        }
+
+        .service-box h3 {
+            margin: 0 0 12px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 25px;
+            line-height: 1.2;
+            color: #0f172a;
+        }
+
+        .service-description {
+            margin: 0 0 25px;
+            color: #64748b;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            margin: 0 0 28px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .service-list li {
+            display: flex;
+            gap: 8px;
+            color: #334155;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .service-list li::before {
+            content: "✓";
+            flex-shrink: 0;
+            color: #2563eb;
+            font-weight: 800;
+        }
+
+        .service-link {
+            position: relative;
+            z-index: 2;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            min-height: 44px;
+            padding: 11px 17px;
+            border-radius: 11px;
+            background: #0f172a;
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            transition:
+                background .25s ease,
+                transform .25s ease;
+        }
+
+        .service-link:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .service-link.secondary {
+            background: #eff6ff;
+            color: #2563eb;
+        }
+
+        .service-link.secondary:hover {
+            background: #2563eb;
+            color: #fff;
+        }
+
+
+        /* =====================================================
+           NOTA
+        ===================================================== */
+
+        .service-note {
+            margin-top: 28px;
+            padding: 25px;
+            border: 1px solid #dbeafe;
+            border-radius: 18px;
+            background: #eff6ff;
+            text-align: center;
+        }
+
+        .service-note strong {
+            display: block;
+            margin-bottom: 7px;
+            color: #0f172a;
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        .service-note p {
+            margin: 0;
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           CTA FINAL
+        ===================================================== */
+
+        .services-final {
+            padding: 100px 0;
+            background: #fff;
+        }
+
+        .services-final-box {
+            position: relative;
+            overflow: hidden;
+            padding: 70px 35px;
+            border-radius: 28px;
+            background:
+                radial-gradient(
+                    circle at 90% 15%,
+                    rgba(6, 182, 212, .25),
+                    transparent 30%
+                ),
+                linear-gradient(135deg, #0f172a, #1e3a8a);
+            text-align: center;
+            color: #fff;
+        }
+
+        .services-final-box h2 {
+            max-width: 700px;
+            margin: 0 auto 16px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(32px, 4vw, 50px);
+            line-height: 1.1;
+            letter-spacing: -.035em;
+        }
+
+        .services-final-box p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: rgba(255, 255, 255, .72);
+            line-height: 1.7;
+        }
+
+        .final-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .final-primary,
+        .final-secondary {
+            min-height: 46px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 21px;
+            border-radius: 11px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            transition: .25s ease;
+        }
+
+        .final-primary {
+            background: white;
+            color: #0f172a;
+        }
+
+        .final-secondary {
+            border: 1px solid rgba(255, 255, 255, .25);
+            color: white;
+        }
+
+        .final-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .final-secondary:hover {
+            background: rgba(255, 255, 255, .08);
+            transform: translateY(-2px);
+        }
+
+
+        /* =====================================================
+           RESPONSIVO
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-box.featured {
+                grid-column: span 1;
+            }
+
+            .services-hero {
+                padding: 120px 0 75px;
+            }
+
+            .services-catalog {
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 520px) {
+
+            .service-box {
+                padding: 27px 22px;
+            }
+
+            .service-list {
+                grid-template-columns: 1fr;
+            }
+
+            .services-final-box {
+                padding: 55px 22px;
+            }
+
+            .services-hero h1 {
+                font-size: 42px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header class="site-header">
+
+        <div class="container header-content">
+
+            <a href="index.html" class="logo">
+                <span class="logo-symbol">N</span>
+
+                <span class="logo-text">
+                    <strong>NEUSA DIGITAL</strong>
+                    <small>SERVICES</small>
+                </span>
+            </a>
+
+
+            <nav class="main-nav" aria-label="Navegação principal">
+
+                <a href="index.html">
+                    Início
+                </a>
+
+                <a
+                    href="servicos.html"
+                    class="active"
+                    aria-current="page"
+                >
+                    Serviços
+                </a>
+
+                <a href="portifolio.html">
+                    Portifolio
+                </a>
+
+                <a href="sobre.html">
+                    Sobre Nós
+                </a>
+
+                <a href="index.html#processo">
+                    Como Funciona
+                </a>
+
+                <a href="index.html#precos">
+                    Preços
+                </a>
+
+                <a href="contacto.html">
+                    Contacto
+                </a>
+
+            </nav>
+
+
+            <a
+                href="contacto.html"
+                class="header-button"
+            >
+                Solicitar um Serviço ↗
+            </a>
+
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="Abrir menu"
+            >
+                ☰
+            </button>
+
+        </div>
+
+
+        <div class="mobile-menu" id="mobileMenu">
+
+            <a href="index.html">
+                Início
+            </a>
+
+            <a href="servicos.html">
+                Serviços
+            </a>
+
+            <a href="portifolio.html">
+                Portfólio
+            </a>
+
+            <a href="sobre.html">
+                Sobre Nós
+            </a>
+
+            <a href="index.html#processo">
+                Como Funciona
+            </a>
+
+            <a href="index.html#precos">
+                Preços
+            </a>
+
+            <a href="contacto.html">
+                Contacto
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+        <!-- =================================================
+             HERO
+        ================================================= -->
+
+        <section class="services-hero">
+
+            <div class="container">
+
+                <div class="services-hero-content">
+
+                    <div class="services-badge">
+                        <span></span>
+                        Serviços digitais
+                    </div>
+
+                    <h1>
+                        Tudo o que precisa,
+                        <span>num só lugar.</span>
+                    </h1>
+
+                    <p>
+                        Na Neusa Digital Services oferecemos soluções
+                        digitais, profissionais e personalizadas para
+                        pessoas, estudantes, profissionais, empreendedores
+                        e empresas.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CATÁLOGO
+        ================================================= -->
+
+        <section class="services-catalog">
+
+            <div class="container">
+
+                <div class="catalog-heading">
+
+                    <span>
+                        O nosso catálogo
+                    </span>
+
+                    <h2>
+                        Escolha o serviço que procura
+                    </h2>
+
+                    <p>
+                        Veja o que fazemos, escolha a solução que
+                        precisa e aceda aos detalhes do serviço.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+
+                    <!-- =================================================
+                         01 — DESENVOLVIMENTO WEB
+                    ================================================== -->
+
+                    <article class="service-box featured">
+
+                        <div class="service-top">
+
+                            <div class="service-icon">
+                                &lt;/&gt;
+                            </div>
+
+                            <span class="service-number">
+                                01 / TECNOLOGIA
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Desenvolvimento Web & Programação
+                        </h3>
+
+                        <p class="service-description">
+                            Criamos websites, páginas e soluções
+                            digitais modernas, responsivas e
+                            adaptadas ao seu projecto.
+                        </p>
+
+                        <ul class="service-list">
+
+                            <li>Websites profissionais</li>
+                            <li>Landing pages</li>
+                            <li>Sites empresariais</li>
+                            <li>Portfólios</li>
+                            <li>Sistemas web</li>
+                            <li>HTML, CSS e JavaScript</li>
+                            <li>Interfaces responsivas</li>
+                            <li>Correção de erros</li>
+                            <li>Manutenção de websites</li>
+                            <li>Personalização</li>
+
+                        </ul>
+
+                        <a
+                            href="desenvolvimento-web.html"
+                            class="service-link"
+                        >
+                            Ver Desenvolvimento Web →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         02 — INFORMÁTICA
+                    ================================================== -->
+
+                    <article class="service-box">
+
+                        <div class="service-top">
+
+                            <div class="service-icon">
+                                IT
+                            </div>
+
+                            <span class="service-number">
+                                02 / INFORMÁTICA
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Informática & Microsoft Office
+                        </h3>
+
+                        <p class="service-description">
+                            Apoio em tarefas informáticas e
+                            ferramentas essenciais para estudo,
+                            trabalho e negócios.
+                        </p>
+
+                        <ul class="service-list">
+
+                            <li>Microsoft Word</li>
+                            <li>Microsoft Excel</li>
+                            <li>PowerPoint</li>
+                            <li>Digitação</li>
+                            <li>Formatação</li>
+                            <li>Organização de ficheiros</li>
+                            <li>Conversão de documentos</li>
+                            <li>Preparação de apresentações</li>
+
+                        </ul>
+
+                        <a
+                            href="https://wa.me/258841234567?text=Ol%C3%A1!%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Inform%C3%A1tica%20%26%20Microsoft%20Office%20da%20Neusa%20Digital%20Services."
+                            class="service-link secondary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Tenho interesse →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         03 — DADOS
+                    ================================================== -->
+
+                    <article class="service-box">
+
+                        <div class="service-top">
+
+                            <div class="service-icon">
+                                #
+                            </div>
+
+                            <span class="service-number">
+                                03 / DADOS
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Dados & Excel
+                        </h3>
+
+                        <p class="service-description">
+                            Organização e tratamento de dados para
+                            tornar a informação mais clara e útil.
+                        </p>
+
+                        <ul class="service-list">
+
+                            <li>Data Entry</li>
+                            <li>Digitação de dados</li>
+                            <li>Tabelas</li>
+                            <li>Fórmulas Excel</li>
+                            <li>Funções Excel</li>
+                            <li>Organização de dados</li>
+                            <li>Relatórios</li>
+                            <li>Formatação de folhas</li>
+
+                        </ul>
+
+                        <a
+                            href="contacto.html"
+                            class="service-link secondary"
+                        >
+                            Tenho interesse →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         04 — DOCUMENTOS
+                    ================================================== -->
+
+                    <article class="service-box">
+
+                        <div class="service-top">
+
+                            <div class="service-icon">
+                                DOC
+                            </div>
+
+                            <span class="service-number">
+                                04 / DOCUMENTOS
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Documentos Profissionais
+                        </h3>
+
+                        <p class="service-description">
+                            Criamos e organizamos documentos com
+                            apresentação profissional e adequada
+                            ao seu objectivo.
+                        </p>
+
+                        <ul class="service-list">
+
+                            <li>Currículos profissionais</li>
+                            <li>Cartas de motivação</li>
+                            <li>Cartas de candidatura</li>
+                            <li>Cartas formais</li>
+                            <li>Documentos profissionais</li>
+                            <li>Revisão de documentos</li>
+                            <li>Formatação</li>
+                            <li>Conversão Word/PDF</li>
+
+                        </ul>
+
+                        <a
+                            href="contacto.html"
+                            class="service-link secondary"
+                        >
+                            Tenho interesse →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         05 — ACADÉMICO
+                    ================================================== -->
+
+                    <article class="service-box">
+
+                        <div class="service-top">
+
+                            <div class="service-icon">
+                                A+
+                            </div>
+
+                            <span class="service-number">
+                                05 / ACADÉMICO
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Serviços Académicos
+                        </h3>
+
+                        <p class="service-description">
+                            Apoio na preparação, organização e
+                            apresentação de trabalhos académicos.
+                        </p>
+
+                        <ul class="service-list">
+
+                            <li>Trabalhos académicos</li>
+                            <li>TFC</li>
+                            <li>Monografias</li>
+                            <li>Formatação académica</li>
+                            <li>Apresentações PowerPoint</li>
+                            <li>Guiões de defesa</li>
+                            <li>Revisão textual</li>
+                            <li>Organização documental</li>
+
+                        </ul>
+
+                        <a
+                            href="contacto.html"
+                            class="service-link secondary"
+                        >
+                            Serviço Académico →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         06 — DESIGN
+                    ================================================== -->
+
+                    <article class="service-box">
+
+                        <div class="service-top">
+
+                            <div class="service-icon">
+                                ✦
+                            </div>
+
+                            <span class="service-number">
+                                06 / DESIGN
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Design & Conteúdo Digital
+                        </h3>
+
+                        <p class="service-description">
+                            Criamos materiais digitais visualmente
+                            organizados e adaptados à identidade
+                            do seu projecto.
+                        </p>
+
+                        <ul class="service-list">
+
+                            <li>Flyers</li>
+                            <li>Cartazes</li>
+                            <li>Banners</li>
+                            <li>Posts</li>
+                            <li>Apresentações</li>
+                            <li>Materiais promocionais</li>
+                            <li>Conteúdo digital</li>
+                            <li>Identidade visual</li>
+
+                        </ul>
+
+                        <a
+                            href="contacto.html"
+                            class="service-link secondary"
+                        >
+                            Ver serviço →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         07 — REDES SOCIAIS
+                    ================================================== -->
+
+                    <article class="service-box">
+
+                        <div class="service-top">
+
+                            <div class="service-icon">
+                                @
+                            </div>
+
+                            <span class="service-number">
+                                07 / DIGITAL
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Redes Sociais & Presença Digital
+                        </h3>
+
+                        <p class="service-description">
+                            Ajudamos pequenos negócios e profissionais
+                            a apresentar melhor os seus serviços no
+                            ambiente digital.
+                        </p>
+
+                        <ul class="service-list">
+
+                            <li>Conteúdo para redes sociais</li>
+                            <li>Posts</li>
+                            <li>Legendas</li>
+                            <li>Banners</li>
+                            <li>Organização de páginas</li>
+                            <li>Planeamento de conteúdo</li>
+                            <li>Materiais promocionais</li>
+                            <li>Presença digital</li>
+
+                        </ul>
+
+                        <a
+                            href="contacto.html"
+                            class="service-link secondary"
+                        >
+                            Tenho interesse →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         08 — ASSISTÊNCIA
+                    ================================================== -->
+
+                    <article class="service-box">
+
+                        <div class="service-top">
+
+                            <div class="service-icon">
+                                VA
+                            </div>
+
+                            <span class="service-number">
+                                08 / ASSISTÊNCIA
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Assistência Virtual
+                        </h3>
+
+                        <p class="service-description">
+                            Apoio remoto para tarefas digitais,
+                            administrativas e organizacionais.
+                        </p>
+
+                        <ul class="service-list">
+
+                            <li>Pesquisa online</li>
+                            <li>Digitação</li>
+                            <li>Organização de documentos</li>
+                            <li>Gestão de ficheiros</li>
+                            <li>Organização de informação</li>
+                            <li>Apoio administrativo</li>
+                            <li>Tarefas digitais</li>
+                            <li>Apoio remoto</li>
+
+                        </ul>
+
+                        <a
+                            href="contacto.html"
+                            class="service-link secondary"
+                        >
+                            Solicitar assistência →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         09 — FORMAÇÃO
+                    ================================================== -->
+
+                    <article class="service-box">
+
+                        <div class="service-top">
+
+                            <div class="service-icon">
+                                EDU
+                            </div>
+
+                            <span class="service-number">
+                                09 / FORMAÇÃO
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Formação & Tutoria
+                        </h3>
+
+                        <p class="service-description">
+                            Formação e orientação em ferramentas
+                            digitais e competências informáticas.
+                        </p>
+
+                        <ul class="service-list">
+
+                            <li>Informática básica</li>
+                            <li>Microsoft Word</li>
+                            <li>Microsoft Excel</li>
+                            <li>PowerPoint</li>
+                            <li>Competências digitais</li>
+                            <li>Introdução à programação</li>
+                            <li>Desenvolvimento Web</li>
+                            <li>Apoio individual</li>
+
+                        </ul>
+
+                        <a
+                            href="contacto.html"
+                            class="service-link secondary"
+                        >
+                            Saber mais →
+                        </a>
+
+                    </article>
+
+                </div>
+
+
+
+                <!-- NOTA -->
+
+                <div class="service-note">
+
+                    <strong>
+                        Precisa de algo que não encontrou aqui?
+                    </strong>
+
+                    <p>
+                        Entre em contacto. Podemos analisar o seu
+                        pedido e verificar se conseguimos desenvolver
+                        uma solução adequada.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CTA FINAL
+        ================================================= -->
+
+        <section class="services-final">
+
+            <div class="container">
+
+                <div class="services-final-box">
+
+                    <h2>
+                        Já sabe o que precisa?
+                    </h2>
+
+                    <p>
+                        Envie-nos o seu pedido. Explique o que pretende
+                        e entraremos em contacto para conversar sobre
+                        a melhor solução.
+                    </p>
+
+                    <div class="final-buttons">
+
+                        <a
+                            href="contacto.html"
+                            class="final-primary"
+                        >
+                            Solicitar um Serviço ↗
+                        </a>
+
+                        <a
+                            href="portifolio.html"
+                            class="final-secondary"
+                        >
+                            Ver Portfólio
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- MARCA -->
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="logo">
+
+                        <span class="logo-symbol">
+                            N
+                        </span>
+
+                        <span class="logo-text">
+                            <strong>NEUSA DIGITAL</strong>
+                            <small>SERVICES</small>
+                        </span>
+
+                    </a>
+
+                    <p>
+                        Soluções digitais profissionais
+                        para transformar ideias em resultados.
+                    </p>
+
+                </div>
+
+
+                <!-- NAVEGAÇÃO -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Navegação
+                    </h3>
+
+                    <a href="index.html">
+                        Início
+                    </a>
+
+                    <a href="servicos.html">
+                        Serviços
+                    </a>
+
+                    <a href="portifolio.html">
+                        Portfólio
+                    </a>
+
+                    <a href="sobre.html">
+                        Sobre Nós
+                    </a>
+
+                </div>
+
+
+                <!-- SERVIÇOS -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Serviços
+                    </h3>
+
+                    <a href="desenvolvimento-web.html">
+                        Desenvolvimento Web
+                    </a>
+
+                    <a href="contacto.html">
+                        Informática & Excel
+                    </a>
+
+                    <a href="contacto.html">
+                        Documentos
+                    </a>
+
+                    <a href="contacto.html">
+                        Serviços Académicos
+                    </a>
+
+                </div>
+
+
+                <!-- CONTACTO -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Contacto
+                    </h3>
+
+                    <a href="mailto:neusadigitalservices@gmail.com">
+                        neusadigitalservices@gmail.com
+                    </a>
+
+                    <a
+                        href="https://wa.me/258841234567?text=Ol%C3%A1!%20Encontrei%20a%20Neusa%20Digital%20Services%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        WhatsApp
+                    </a>
+
+                    <span>
+                        Moçambique
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    ©
+                    <span class="footer-year"></span>
+                    Neusa Digital Services.
+                    Todos os direitos reservados.
+                </p>
+
+                <span>
+                    Digital Solutions. Professional Results.
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JavaScript principal -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

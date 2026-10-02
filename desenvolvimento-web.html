@@ -1,0 +1,2016 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Desenvolvimento Web & Programação | Neusa Digital Services</title>
+
+    <meta
+        name="description"
+        content="Serviços profissionais de desenvolvimento web, programação, websites, landing pages, sistemas web, manutenção e correção de erros."
+    >
+
+    <meta
+        name="keywords"
+        content="desenvolvimento web, programação, websites, landing pages, HTML, CSS, JavaScript, sistemas web, Moçambique"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =========================================================
+           DESENVOLVIMENTO WEB
+        ========================================================= */
+
+        .web-page {
+            background: #f8fafc;
+        }
+
+        .web-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 150px 0 100px;
+            background:
+                radial-gradient(circle at 80% 20%, rgba(37, 99, 235, .16), transparent 32%),
+                radial-gradient(circle at 15% 80%, rgba(6, 182, 212, .10), transparent 30%),
+                #ffffff;
+        }
+
+        .web-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(37, 99, 235, .035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(37, 99, 235, .035) 1px, transparent 1px);
+            background-size: 42px 42px;
+        }
+
+        .web-hero-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .breadcrumb {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 25px;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .breadcrumb a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .web-hero h1 {
+            max-width: 760px;
+            margin: 0 0 24px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(42px, 5vw, 70px);
+            line-height: 1.04;
+            letter-spacing: -2px;
+            color: #0f172a;
+        }
+
+        .web-hero h1 span {
+            color: #2563eb;
+        }
+
+        .web-hero-description {
+            max-width: 650px;
+            margin-bottom: 30px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #64748b;
+        }
+
+        .web-hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 32px;
+        }
+
+        .web-trust {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+
+        .web-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            color: #475569;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .web-trust-item strong {
+            color: #16a34a;
+            font-size: 17px;
+        }
+
+        /* HERO VISUAL */
+
+        .web-code-window {
+            position: relative;
+            border-radius: 24px;
+            padding: 18px;
+            background: #0f172a;
+            box-shadow:
+                0 35px 80px rgba(15, 23, 42, .22),
+                0 10px 30px rgba(37, 99, 235, .12);
+            transform: rotate(1.5deg);
+        }
+
+        .code-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+
+        .code-dots {
+            display: flex;
+            gap: 7px;
+        }
+
+        .code-dots span {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #475569;
+        }
+
+        .code-file {
+            color: #94a3b8;
+            font-size: 12px;
+        }
+
+        .code-content {
+            padding: 25px 10px 15px;
+            font-family: Consolas, Monaco, monospace;
+            font-size: 14px;
+            line-height: 1.9;
+            color: #cbd5e1;
+        }
+
+        .code-blue {
+            color: #60a5fa;
+        }
+
+        .code-green {
+            color: #34d399;
+        }
+
+        .code-purple {
+            color: #c084fc;
+        }
+
+        .code-yellow {
+            color: #facc15;
+        }
+
+        .web-floating-card {
+            position: absolute;
+            right: -30px;
+            bottom: -25px;
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            padding: 16px 18px;
+            border: 1px solid rgba(255,255,255,.65);
+            border-radius: 17px;
+            background: rgba(255,255,255,.95);
+            box-shadow: 0 20px 45px rgba(15, 23, 42, .15);
+        }
+
+        .web-floating-icon {
+            display: grid;
+            place-items: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 13px;
+            background: #eff6ff;
+            color: #2563eb;
+            font-size: 21px;
+        }
+
+        .web-floating-card strong {
+            display: block;
+            color: #0f172a;
+            font-size: 14px;
+        }
+
+        .web-floating-card small {
+            color: #64748b;
+        }
+
+        /* GENERAL */
+
+        .web-section {
+            padding: 100px 0;
+        }
+
+        .web-section.white {
+            background: #ffffff;
+        }
+
+        .web-section-heading {
+            max-width: 760px;
+            margin: 0 auto 55px;
+            text-align: center;
+        }
+
+        .web-section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 14px;
+            color: #2563eb;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        .web-section-heading h2 {
+            margin: 0 0 17px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(32px, 4vw, 48px);
+            line-height: 1.1;
+            letter-spacing: -1px;
+            color: #0f172a;
+        }
+
+        .web-section-heading p {
+            margin: 0;
+            color: #64748b;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        /* SERVICES */
+
+        .web-services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .web-service-card {
+            position: relative;
+            padding: 30px;
+            border: 1px solid #e2e8f0;
+            border-radius: 22px;
+            background: #ffffff;
+            transition: .3s ease;
+        }
+
+        .web-service-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(37, 99, 235, .3);
+            box-shadow: 0 20px 50px rgba(15, 23, 42, .08);
+        }
+
+        .web-service-icon {
+            display: grid;
+            place-items: center;
+            width: 55px;
+            height: 55px;
+            margin-bottom: 22px;
+            border-radius: 16px;
+            background: #eff6ff;
+            color: #2563eb;
+            font-size: 24px;
+        }
+
+        .web-service-card h3 {
+            margin: 0 0 11px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+            color: #0f172a;
+        }
+
+        .web-service-card p {
+            margin: 0;
+            color: #64748b;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* TYPES */
+
+        .web-types {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .web-type-card {
+            position: relative;
+            overflow: hidden;
+            padding: 32px;
+            border-radius: 24px;
+            background: #0f172a;
+            color: white;
+        }
+
+        .web-type-card::after {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            right: -70px;
+            top: -70px;
+            border-radius: 50%;
+            background: rgba(37, 99, 235, .28);
+        }
+
+        .web-type-number {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 20px;
+            color: #60a5fa;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .web-type-card h3 {
+            position: relative;
+            z-index: 1;
+            margin: 0 0 12px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 23px;
+        }
+
+        .web-type-card p {
+            position: relative;
+            z-index: 1;
+            margin: 0 0 22px;
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        .web-type-price {
+            position: relative;
+            z-index: 1;
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .web-type-price small {
+            font-size: 12px;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+
+        /* PRICING */
+
+        .web-pricing {
+            background:
+                radial-gradient(circle at 10% 20%, rgba(96,165,250,.12), transparent 30%),
+                radial-gradient(circle at 90% 80%, rgba(6,182,212,.10), transparent 30%),
+                #0f172a;
+        }
+
+        .web-pricing .web-section-heading h2 {
+            color: white;
+        }
+
+        .web-pricing .web-section-heading p {
+            color: #94a3b8;
+        }
+
+        .web-pricing .web-section-label {
+            color: #60a5fa;
+        }
+
+        .pricing-grid-web {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            align-items: stretch;
+        }
+
+        .pricing-web-card {
+            display: flex;
+            flex-direction: column;
+            padding: 32px;
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 23px;
+            background: rgba(255,255,255,.045);
+            backdrop-filter: blur(12px);
+        }
+
+        .pricing-web-card.featured {
+            position: relative;
+            border-color: #2563eb;
+            background: linear-gradient(
+                145deg,
+                rgba(37,99,235,.22),
+                rgba(255,255,255,.05)
+            );
+            transform: translateY(-8px);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            padding: 6px 10px;
+            border-radius: 50px;
+            background: #2563eb;
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .6px;
+        }
+
+        .pricing-web-card h3 {
+            margin: 0 0 8px;
+            font-family: "Space Grotesk", sans-serif;
+            color: white;
+            font-size: 21px;
+        }
+
+        .pricing-web-card > p {
+            min-height: 48px;
+            margin: 0 0 22px;
+            color: #94a3b8;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .pricing-value {
+            margin-bottom: 24px;
+            color: white;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 34px;
+            font-weight: 700;
+        }
+
+        .pricing-value small {
+            font-family: "DM Sans", sans-serif;
+            font-size: 12px;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+
+        .pricing-web-list {
+            display: grid;
+            gap: 12px;
+            margin: 0 0 28px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .pricing-web-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: #cbd5e1;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .pricing-web-list li::before {
+            content: "✓";
+            color: #60a5fa;
+            font-weight: 800;
+        }
+
+        .pricing-web-card .web-price-button {
+            margin-top: auto;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 48px;
+            padding: 0 18px;
+            border-radius: 12px;
+            background: #ffffff;
+            color: #0f172a;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            transition: .25s ease;
+        }
+
+        .pricing-web-card .web-price-button:hover {
+            transform: translateY(-2px);
+            background: #eff6ff;
+        }
+
+        /* INCLUDED */
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .included-image {
+            min-height: 470px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 28px;
+            background:
+                linear-gradient(135deg, #2563eb, #1d4ed8 55%, #0f172a);
+            box-shadow: 0 25px 70px rgba(37, 99, 235, .18);
+        }
+
+        .included-image::before {
+            content: "</>";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Consolas, monospace;
+            font-size: 110px;
+            font-weight: 700;
+            color: rgba(255,255,255,.12);
+        }
+
+        .included-content h2 {
+            margin: 0 0 20px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(30px, 4vw, 45px);
+            color: #0f172a;
+        }
+
+        .included-content > p {
+            margin: 0 0 28px;
+            color: #64748b;
+            line-height: 1.8;
+        }
+
+        .included-list {
+            display: grid;
+            gap: 16px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .included-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        .included-check {
+            flex: 0 0 25px;
+            display: grid;
+            place-items: center;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #dcfce7;
+            color: #16a34a;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        /* PROCESS */
+
+        .web-process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .web-process-item {
+            position: relative;
+            padding: 30px 25px;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            background: #ffffff;
+        }
+
+        .web-process-number {
+            margin-bottom: 18px;
+            color: #2563eb;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .web-process-item h3 {
+            margin: 0 0 10px;
+            color: #0f172a;
+            font-size: 18px;
+        }
+
+        .web-process-item p {
+            margin: 0;
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* TECHNOLOGIES */
+
+        .technology-box {
+            padding: 45px;
+            border-radius: 28px;
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            text-align: center;
+        }
+
+        .technology-box h2 {
+            margin: 0 0 14px;
+            font-family: "Space Grotesk", sans-serif;
+            color: #0f172a;
+            font-size: 30px;
+        }
+
+        .technology-box p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        .technology-tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .technology-tags span {
+            padding: 10px 15px;
+            border: 1px solid #bfdbfe;
+            border-radius: 50px;
+            background: white;
+            color: #1d4ed8;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* FAQ */
+
+        .faq-grid {
+            max-width: 850px;
+            margin: 0 auto;
+            display: grid;
+            gap: 14px;
+        }
+
+        .faq-item {
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            background: white;
+            overflow: hidden;
+        }
+
+        .faq-item summary {
+            cursor: pointer;
+            padding: 21px 23px;
+            color: #0f172a;
+            font-weight: 700;
+            list-style: none;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: "+";
+            float: right;
+            color: #2563eb;
+            font-size: 21px;
+        }
+
+        .faq-item[open] summary::after {
+            content: "−";
+        }
+
+        .faq-answer {
+            padding: 0 23px 22px;
+            color: #64748b;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* CTA */
+
+        .web-final-cta {
+            padding: 90px 0;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8 55%, #0f172a);
+        }
+
+        .web-final-content {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            color: white;
+        }
+
+        .web-final-content h2 {
+            margin: 0 0 18px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(32px, 5vw, 52px);
+            line-height: 1.1;
+        }
+
+        .web-final-content p {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            color: #dbeafe;
+            line-height: 1.8;
+        }
+
+        .web-final-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .web-final-buttons a {
+            min-height: 52px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 25px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: .25s ease;
+        }
+
+        .web-final-primary {
+            background: white;
+            color: #1d4ed8;
+        }
+
+        .web-final-secondary {
+            border: 1px solid rgba(255,255,255,.3);
+            color: white;
+            background: rgba(255,255,255,.08);
+        }
+
+        .web-final-buttons a:hover {
+            transform: translateY(-3px);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 1050px) {
+            .web-hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .web-hero {
+                padding-top: 120px;
+            }
+
+            .web-code-window {
+                max-width: 700px;
+                margin: auto;
+            }
+
+            .web-services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pricing-grid-web {
+                grid-template-columns: 1fr;
+                max-width: 620px;
+                margin: auto;
+            }
+
+            .pricing-web-card.featured {
+                transform: none;
+            }
+
+            .included-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .included-image {
+                min-height: 350px;
+            }
+
+            .web-process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 780px) {
+            .web-hero {
+                padding: 110px 0 75px;
+            }
+
+            .web-hero h1 {
+                letter-spacing: -1.5px;
+            }
+
+            .web-hero-description {
+                font-size: 16px;
+            }
+
+            .web-floating-card {
+                right: 10px;
+            }
+
+            .web-services-grid,
+            .web-types {
+                grid-template-columns: 1fr;
+            }
+
+            .web-section {
+                padding: 75px 0;
+            }
+
+            .web-process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .technology-box {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .web-hero-buttons {
+                flex-direction: column;
+            }
+
+            .web-hero-buttons a {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .web-code-window {
+                padding: 12px;
+            }
+
+            .code-content {
+                font-size: 11px;
+            }
+
+            .web-floating-card {
+                position: relative;
+                right: auto;
+                bottom: auto;
+                width: fit-content;
+                margin: 15px auto 0;
+            }
+
+            .web-service-card,
+            .web-type-card,
+            .pricing-web-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body class="web-page">
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-content">
+
+            <a href="index.html" class="logo" aria-label="Neusa Digital Services - Página inicial">
+                <span class="logo-symbol">N</span>
+
+                <span class="logo-text">
+                    <strong>NEUSA DIGITAL</strong>
+                    <small>SERVICES</small>
+                </span>
+            </a>
+
+            <nav class="main-nav" aria-label="Navegação principal">
+                <a href="index.html">Início</a>
+                <a href="servicos.html" class="active">Serviços</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="index.html#processo">Como Funciona</a>
+                <a href="index.html#precos">Preços</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+
+            <a href="contacto.html" class="header-button">
+                Solicitar um Serviço ↗
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Abrir menu"
+                type="button"
+            >
+                ☰
+            </button>
+
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html">Início</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="index.html#processo">Como Funciona</a>
+            <a href="index.html#precos">Preços</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <main>
+
+        <section class="web-hero">
+            <div class="container web-hero-grid">
+
+                <div>
+                    <div class="breadcrumb">
+                        <a href="servicos.html">Serviços</a>
+                        <span>›</span>
+                        <span>Desenvolvimento Web</span>
+                    </div>
+
+                    <h1>
+                        Websites que fazem
+                        <span>o seu negócio crescer.</span>
+                    </h1>
+
+                    <p class="web-hero-description">
+                        Criamos websites modernos, responsivos e profissionais
+                        para empresas, negócios, profissionais, estudantes e
+                        projectos que precisam de uma presença digital forte.
+                    </p>
+
+                    <div class="web-hero-buttons">
+                        <a href="contacto.html" class="primary-button">
+                            Quero criar o meu website ↗
+                        </a>
+
+                        <a href="#precos" class="secondary-button">
+                            Ver preços
+                        </a>
+                    </div>
+
+                    <div class="web-trust">
+
+                        <div class="web-trust-item">
+                            <strong>✓</strong>
+                            Design responsivo
+                        </div>
+
+                        <div class="web-trust-item">
+                            <strong>✓</strong>
+                            Código organizado
+                        </div>
+
+                        <div class="web-trust-item">
+                            <strong>✓</strong>
+                            Suporte após entrega
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div>
+
+                    <div class="web-code-window">
+
+                        <div class="code-top">
+
+                            <div class="code-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <span class="code-file">
+                                website.html
+                            </span>
+
+                        </div>
+
+                        <div class="code-content">
+
+                            <div>
+                                <span class="code-purple">&lt;section</span>
+                                <span class="code-blue"> class</span>=
+                                <span class="code-green">"hero"</span>
+                                <span class="code-purple">&gt;</span>
+                            </div>
+
+                            <div>
+                                &nbsp;&nbsp;
+                                <span class="code-purple">&lt;h1&gt;</span>
+                            </div>
+
+                            <div>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="code-yellow">
+                                    O seu negócio começa aqui.
+                                </span>
+                            </div>
+
+                            <div>
+                                &nbsp;&nbsp;
+                                <span class="code-purple">&lt;/h1&gt;</span>
+                            </div>
+
+                            <div>
+                                &nbsp;&nbsp;
+                                <span class="code-purple">&lt;p&gt;</span>
+                            </div>
+
+                            <div>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="code-yellow">
+                                    Soluções digitais profissionais.
+                                </span>
+                            </div>
+
+                            <div>
+                                &nbsp;&nbsp;
+                                <span class="code-purple">&lt;/p&gt;</span>
+                            </div>
+
+                            <div>
+                                <span class="code-purple">&lt;/section&gt;</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="web-floating-card">
+
+                        <div class="web-floating-icon">
+                            ⚡
+                        </div>
+
+                        <div>
+                            <strong>Website responsivo</strong>
+                            <small>Computador • Tablet • Telemóvel</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- O QUE OFERECEMOS -->
+        <section class="web-section white">
+
+            <div class="container">
+
+                <div class="web-section-heading">
+
+                    <div class="web-section-label">
+                        <span>●</span>
+                        O que fazemos
+                    </div>
+
+                    <h2>
+                        Desenvolvimento pensado para o seu projecto.
+                    </h2>
+
+                    <p>
+                        Do primeiro conceito ao website publicado,
+                        desenvolvemos soluções digitais adaptadas ao objectivo
+                        de cada cliente.
+                    </p>
+
+                </div>
+
+
+                <div class="web-services-grid">
+
+                    <article class="web-service-card">
+
+                        <div class="web-service-icon">⌘</div>
+
+                        <h3>Websites Profissionais</h3>
+
+                        <p>
+                            Sites modernos para apresentar a sua empresa,
+                            actividade, serviços, produtos ou marca.
+                        </p>
+
+                    </article>
+
+
+                    <article class="web-service-card">
+
+                        <div class="web-service-icon">↗</div>
+
+                        <h3>Landing Pages</h3>
+
+                        <p>
+                            Páginas focadas em campanhas, divulgação de
+                            serviços, produtos, eventos ou captação de clientes.
+                        </p>
+
+                    </article>
+
+
+                    <article class="web-service-card">
+
+                        <div class="web-service-icon">▦</div>
+
+                        <h3>Sites Empresariais</h3>
+
+                        <p>
+                            Presença digital estruturada para empresas,
+                            instituições, organizações e pequenos negócios.
+                        </p>
+
+                    </article>
+
+
+                    <article class="web-service-card">
+
+                        <div class="web-service-icon">◈</div>
+
+                        <h3>Portfólios</h3>
+
+                        <p>
+                            Websites profissionais para apresentar trabalhos,
+                            competências, projectos e experiência.
+                        </p>
+
+                    </article>
+
+
+                    <article class="web-service-card">
+
+                        <div class="web-service-icon">&lt;/&gt;</div>
+
+                        <h3>Programação Web</h3>
+
+                        <p>
+                            Desenvolvimento com HTML, CSS e JavaScript,
+                            incluindo interfaces, funcionalidades e interacções.
+                        </p>
+
+                    </article>
+
+
+                    <article class="web-service-card">
+
+                        <div class="web-service-icon">⚙</div>
+
+                        <h3>Sistemas Web</h3>
+
+                        <p>
+                            Desenvolvimento de soluções web personalizadas
+                            para necessidades específicas.
+                        </p>
+
+                    </article>
+
+
+                    <article class="web-service-card">
+
+                        <div class="web-service-icon">✓</div>
+
+                        <h3>Correção de Erros</h3>
+
+                        <p>
+                            Identificação e correcção de problemas de layout,
+                            código, responsividade e funcionamento.
+                        </p>
+
+                    </article>
+
+
+                    <article class="web-service-card">
+
+                        <div class="web-service-icon">↻</div>
+
+                        <h3>Manutenção</h3>
+
+                        <p>
+                            Actualizações, pequenas alterações, correcções e
+                            acompanhamento do website após a entrega.
+                        </p>
+
+                    </article>
+
+
+                    <article class="web-service-card">
+
+                        <div class="web-service-icon">✦</div>
+
+                        <h3>Personalização</h3>
+
+                        <p>
+                            Alteração de layouts, cores, secções, conteúdos e
+                            funcionalidades de websites existentes.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TIPOS DE WEBSITE -->
+        <section class="web-section">
+
+            <div class="container">
+
+                <div class="web-section-heading">
+
+                    <div class="web-section-label">
+                        Tipos de projectos
+                    </div>
+
+                    <h2>
+                        Que tipo de website precisa?
+                    </h2>
+
+                    <p>
+                        Temos diferentes soluções para diferentes objectivos.
+                    </p>
+
+                </div>
+
+
+                <div class="web-types">
+
+                    <article class="web-type-card">
+
+                        <div class="web-type-number">01 / LANDING PAGE</div>
+
+                        <h3>
+                            Uma página. Um objectivo.
+                        </h3>
+
+                        <p>
+                            Ideal para divulgar um serviço, produto, campanha,
+                            evento ou projecto específico.
+                        </p>
+
+                        <div class="web-type-price">
+                            Desde 3.500 MT
+                        </div>
+
+                    </article>
+
+
+                    <article class="web-type-card">
+
+                        <div class="web-type-number">02 / PORTFÓLIO</div>
+
+                        <h3>
+                            Mostre o seu trabalho profissionalmente.
+                        </h3>
+
+                        <p>
+                            Uma presença digital para apresentar os seus
+                            trabalhos, competências, projectos e contactos.
+                        </p>
+
+                        <div class="web-type-price">
+                            Desde 6.000 MT
+                        </div>
+
+                    </article>
+
+
+                    <article class="web-type-card">
+
+                        <div class="web-type-number">03 / INSTITUCIONAL</div>
+
+                        <h3>
+                            Dê credibilidade à sua empresa.
+                        </h3>
+
+                        <p>
+                            Website com páginas estruturadas para apresentar
+                            empresa, serviços, equipa, contactos e informações.
+                        </p>
+
+                        <div class="web-type-price">
+                            Desde 7.500 MT
+                        </div>
+
+                    </article>
+
+
+                    <article class="web-type-card">
+
+                        <div class="web-type-number">04 / EMPRESARIAL</div>
+
+                        <h3>
+                            Uma solução digital mais completa.
+                        </h3>
+
+                        <p>
+                            Para empresas e projectos que precisam de mais
+                            páginas, funcionalidades e personalização.
+                        </p>
+
+                        <div class="web-type-price">
+                            Desde 10.000 MT
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PREÇOS -->
+        <section class="web-section web-pricing" id="precos">
+
+            <div class="container">
+
+                <div class="web-section-heading">
+
+                    <div class="web-section-label">
+                        Investimento
+                    </div>
+
+                    <h2>
+                        Preços transparentes.
+                    </h2>
+
+                    <p>
+                        Escolha a solução que mais se aproxima da sua
+                        necessidade. Projectos maiores podem ser personalizados.
+                    </p>
+
+                </div>
+
+
+                <div class="pricing-grid-web">
+
+                    <!-- LANDING -->
+                    <article class="pricing-web-card">
+
+                        <h3>Landing Page</h3>
+
+                        <p>
+                            Para campanhas, produtos, serviços ou divulgação.
+                        </p>
+
+                        <div class="pricing-value">
+                            3.500 MT
+                            <small>desde</small>
+                        </div>
+
+                        <ul class="pricing-web-list">
+                            <li>1 página profissional</li>
+                            <li>Design responsivo</li>
+                            <li>Secção de apresentação</li>
+                            <li>Serviços ou produto</li>
+                            <li>Botão de contacto</li>
+                            <li>Integração com WhatsApp</li>
+                        </ul>
+
+                        <a href="contacto.html" class="web-price-button">
+                            Solicitar este serviço
+                        </a>
+
+                    </article>
+
+
+                    <!-- INSTITUCIONAL -->
+                    <article class="pricing-web-card featured">
+
+                        <span class="pricing-badge">
+                            Mais procurado
+                        </span>
+
+                        <h3>Website Profissional</h3>
+
+                        <p>
+                            Para profissionais, marcas e pequenos negócios.
+                        </p>
+
+                        <div class="pricing-value">
+                            7.500 MT
+                            <small>desde</small>
+                        </div>
+
+                        <ul class="pricing-web-list">
+                            <li>Até 5 páginas</li>
+                            <li>Design profissional</li>
+                            <li>Versão para telemóvel</li>
+                            <li>Secção de serviços</li>
+                            <li>Portfólio ou projectos</li>
+                            <li>Formulário de contacto</li>
+                            <li>Integração com redes sociais</li>
+                        </ul>
+
+                        <a href="contacto.html" class="web-price-button">
+                            Solicitar este serviço
+                        </a>
+
+                    </article>
+
+
+                    <!-- EMPRESARIAL -->
+                    <article class="pricing-web-card">
+
+                        <h3>Website Empresarial</h3>
+
+                        <p>
+                            Para empresas que precisam de uma presença digital
+                            mais completa.
+                        </p>
+
+                        <div class="pricing-value">
+                            10.000 MT
+                            <small>desde</small>
+                        </div>
+
+                        <ul class="pricing-web-list">
+                            <li>Estrutura personalizada</li>
+                            <li>Mais páginas e secções</li>
+                            <li>Design responsivo</li>
+                            <li>Funcionalidades personalizadas</li>
+                            <li>Formulários</li>
+                            <li>Integrações necessárias</li>
+                            <li>Testes antes da entrega</li>
+                        </ul>
+
+                        <a href="contacto.html" class="web-price-button">
+                            Solicitar este serviço
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- OUTROS PREÇOS -->
+        <section class="web-section white">
+
+            <div class="container">
+
+                <div class="web-section-heading">
+
+                    <div class="web-section-label">
+                        Serviços adicionais
+                    </div>
+
+                    <h2>
+                        Também podemos cuidar do que já existe.
+                    </h2>
+
+                    <p>
+                        Não precisa de começar um website do zero para pedir
+                        ajuda. Também trabalhamos com websites existentes.
+                    </p>
+
+                </div>
+
+
+                <div class="web-services-grid">
+
+                    <article class="web-service-card">
+
+                        <div class="web-service-icon">⚙</div>
+
+                        <h3>Manutenção</h3>
+
+                        <p>
+                            Desde <strong>1.500 MT/mês</strong>, dependendo da
+                            quantidade de actualizações e tarefas.
+                        </p>
+
+                    </article>
+
+
+                    <article class="web-service-card">
+
+                        <div class="web-service-icon">!</div>
+
+                        <h3>Correção de erros</h3>
+
+                        <p>
+                            Desde <strong>800 MT</strong>, dependendo do tipo e
+                            da complexidade do problema.
+                        </p>
+
+                    </article>
+
+
+                    <article class="web-service-card">
+
+                        <div class="web-service-icon">✦</div>
+
+                        <h3>Personalização</h3>
+
+                        <p>
+                            Desde <strong>1.000 MT</strong>, dependendo das
+                            alterações solicitadas.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- O QUE RECEBE -->
+        <section class="web-section">
+
+            <div class="container included-grid">
+
+                <div class="included-image" aria-hidden="true"></div>
+
+                <div class="included-content">
+
+                    <div class="web-section-label">
+                        O que está incluído
+                    </div>
+
+                    <h2>
+                        Não entregamos apenas código.
+                    </h2>
+
+                    <p>
+                        O objectivo é entregar uma solução que o cliente possa
+                        realmente utilizar e apresentar profissionalmente.
+                    </p>
+
+                    <ul class="included-list">
+
+                        <li>
+                            <span class="included-check">✓</span>
+                            <span>Layout profissional e adaptado ao projecto.</span>
+                        </li>
+
+                        <li>
+                            <span class="included-check">✓</span>
+                            <span>Compatibilidade com computador, tablet e telemóvel.</span>
+                        </li>
+
+                        <li>
+                            <span class="included-check">✓</span>
+                            <span>Navegação organizada e fácil de utilizar.</span>
+                        </li>
+
+                        <li>
+                            <span class="included-check">✓</span>
+                            <span>Estrutura HTML, CSS e JavaScript organizada.</span>
+                        </li>
+
+                        <li>
+                            <span class="included-check">✓</span>
+                            <span>Botões e contactos funcionais.</span>
+                        </li>
+
+                        <li>
+                            <span class="included-check">✓</span>
+                            <span>Testes básicos antes da entrega.</span>
+                        </li>
+
+                        <li>
+                            <span class="included-check">✓</span>
+                            <span>Orientação para utilização e futuras alterações.</span>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROCESSO -->
+        <section class="web-section white">
+
+            <div class="container">
+
+                <div class="web-section-heading">
+
+                    <div class="web-section-label">
+                        Como funciona
+                    </div>
+
+                    <h2>
+                        Do pedido à entrega.
+                    </h2>
+
+                    <p>
+                        O processo é simples e transparente.
+                    </p>
+
+                </div>
+
+
+                <div class="web-process-grid">
+
+                    <article class="web-process-item">
+
+                        <div class="web-process-number">01</div>
+
+                        <h3>Pedido</h3>
+
+                        <p>
+                            O cliente explica o que pretende, envia as
+                            informações e indica o objectivo do projecto.
+                        </p>
+
+                    </article>
+
+
+                    <article class="web-process-item">
+
+                        <div class="web-process-number">02</div>
+
+                        <h3>Planeamento</h3>
+
+                        <p>
+                            Definimos estrutura, funcionalidades, conteúdos,
+                            prazo e investimento.
+                        </p>
+
+                    </article>
+
+
+                    <article class="web-process-item">
+
+                        <div class="web-process-number">03</div>
+
+                        <h3>Desenvolvimento</h3>
+
+                        <p>
+                            O projecto é desenvolvido, testado e ajustado
+                            conforme as necessidades acordadas.
+                        </p>
+
+                    </article>
+
+
+                    <article class="web-process-item">
+
+                        <div class="web-process-number">04</div>
+
+                        <h3>Entrega</h3>
+
+                        <p>
+                            Depois dos testes e aprovação, o projecto é
+                            entregue ao cliente.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TECNOLOGIAS -->
+        <section class="web-section">
+
+            <div class="container">
+
+                <div class="technology-box">
+
+                    <h2>
+                        Tecnologias utilizadas
+                    </h2>
+
+                    <p>
+                        A tecnologia utilizada depende do tipo de projecto,
+                        funcionalidades e objectivos definidos.
+                    </p>
+
+                    <div class="technology-tags">
+
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>Responsive Design</span>
+                        <span>Git</span>
+                        <span>Web Design</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FAQ -->
+        <section class="web-section white">
+
+            <div class="container">
+
+                <div class="web-section-heading">
+
+                    <div class="web-section-label">
+                        Perguntas frequentes
+                    </div>
+
+                    <h2>
+                        Antes de começar, saiba como funciona.
+                    </h2>
+
+                </div>
+
+
+                <div class="faq-grid">
+
+                    <details class="faq-item">
+
+                        <summary>
+                            Os preços são fixos?
+                        </summary>
+
+                        <div class="faq-answer">
+                            Os valores apresentados são preços iniciais.
+                            Projectos com funcionalidades, páginas ou requisitos
+                            adicionais podem ter um valor diferente, definido
+                            antes do início do desenvolvimento.
+                        </div>
+
+                    </details>
+
+
+                    <details class="faq-item">
+
+                        <summary>
+                            O website funciona no telemóvel?
+                        </summary>
+
+                        <div class="faq-answer">
+                            Sim. Os websites são desenvolvidos com estrutura
+                            responsiva para diferentes tamanhos de ecrã.
+                        </div>
+
+                    </details>
+
+
+                    <details class="faq-item">
+
+                        <summary>
+                            Posso pedir alterações?
+                        </summary>
+
+                        <div class="faq-answer">
+                            Sim. Durante o desenvolvimento são consideradas as
+                            alterações previstas no projecto. Alterações
+                            adicionais ou mudanças significativas podem ter
+                            custo adicional.
+                        </div>
+
+                    </details>
+
+
+                    <details class="faq-item">
+
+                        <summary>
+                            Vocês também corrigem websites existentes?
+                        </summary>
+
+                        <div class="faq-answer">
+                            Sim. É possível solicitar correcções, melhorias,
+                            personalizações e manutenção de websites já
+                            existentes.
+                        </div>
+
+                    </details>
+
+
+                    <details class="faq-item">
+
+                        <summary>
+                            O domínio e alojamento estão incluídos?
+                        </summary>
+
+                        <div class="faq-answer">
+                            Não estão incluídos automaticamente nos preços
+                            apresentados. Caso o cliente precise, podemos
+                            orientar na escolha e configuração destes serviços.
+                        </div>
+
+                    </details>
+
+
+                    <details class="faq-item">
+
+                        <summary>
+                            Como faço para solicitar um website?
+                        </summary>
+
+                        <div class="faq-answer">
+                            Basta entrar em contacto através da página de
+                            contacto e explicar o que pretende. Depois
+                            analisaremos o projecto e apresentaremos a solução
+                            adequada.
+                        </div>
+
+                    </details>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+        <section class="web-final-cta">
+
+            <div class="container">
+
+                <div class="web-final-content">
+
+                    <h2>
+                        Pronta para transformar a sua ideia em website?
+                    </h2>
+
+                    <p>
+                        Conte-nos o que pretende criar. Vamos transformar a
+                        sua ideia numa solução digital profissional.
+                    </p>
+
+                    <div class="web-final-buttons">
+
+                        <a
+                            href="contacto.html"
+                            class="web-final-primary"
+                        >
+                            Solicitar um Serviço ↗
+                        </a>
+
+                        <a
+                            href="portfolio.html"
+                            class="web-final-secondary"
+                        >
+                            Ver Portfólio
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+
+                    <span class="logo-symbol">N</span>
+
+                    <span class="logo-text">
+                        <strong>NEUSA DIGITAL</strong>
+                        <small>SERVICES</small>
+                    </span>
+
+                </a>
+
+                <p>
+                    Digital Solutions. Professional Results.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Serviços</h3>
+
+                <a href="servicos.html">
+                    Todos os serviços
+                </a>
+
+                <a href="desenvolvimento-web.html">
+                    Desenvolvimento Web
+                </a>
+
+                <a href="contacto.html">
+                    Solicitar serviço
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Empresa</h3>
+
+                <a href="sobre.html">
+                    Sobre Nós
+                </a>
+
+                <a href="portfolio.html">
+                    Portfólio
+                </a>
+
+                <a href="contacto.html">
+                    Contacto
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Contacto</h3>
+
+                <a href="mailto:neusadigitalservices@gmail.com">
+                    neusadigitalservices@gmail.com
+                </a>
+
+                <a href="contacto.html">
+                    WhatsApp
+                </a>
+
+                <span>
+                    Moçambique
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    © <span class="footer-year"></span>
+                    Neusa Digital Services. Todos os direitos reservados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

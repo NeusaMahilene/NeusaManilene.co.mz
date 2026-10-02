@@ -1,0 +1,2459 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfólio | Neusa Digital Services</title>
+
+    <meta name="description"
+        content="Conheça projectos e soluções desenvolvidos pela Neusa Digital Services: plataformas digitais, websites, programação, Excel, documentos profissionais e conteúdo digital.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =====================================================
+           BASE
+        ===================================================== */
+
+        .portfolio-page {
+            background: #f8fafc;
+        }
+
+        .portfolio-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 155px 0 95px;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(37,99,235,.12), transparent 30%),
+                radial-gradient(circle at 90% 30%, rgba(6,182,212,.10), transparent 28%),
+                #ffffff;
+        }
+
+        .portfolio-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(37,99,235,.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(37,99,235,.035) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+        }
+
+        .portfolio-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .portfolio-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            margin-bottom: 22px;
+            border: 1px solid #dbeafe;
+            border-radius: 999px;
+            background: #eff6ff;
+            color: #2563eb;
+            font-size: .78rem;
+            font-weight: 800;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .portfolio-badge i {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #2563eb;
+        }
+
+        .portfolio-hero h1 {
+            margin: 0 auto 22px;
+            max-width: 850px;
+            color: #0f172a;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(2.6rem, 5vw, 4.7rem);
+            line-height: 1.03;
+            letter-spacing: -.05em;
+        }
+
+        .portfolio-hero h1 span {
+            color: #2563eb;
+        }
+
+        .portfolio-hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #64748b;
+            font-size: 1.06rem;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .portfolio-intro {
+            padding: 80px 0 40px;
+            background: #fff;
+        }
+
+        .portfolio-intro-grid {
+            display: grid;
+            grid-template-columns: .9fr 1.4fr;
+            gap: 70px;
+            align-items: end;
+        }
+
+        .portfolio-label {
+            display: block;
+            margin-bottom: 13px;
+            color: #2563eb;
+            font-size: .76rem;
+            font-weight: 800;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+        }
+
+        .portfolio-intro h2 {
+            margin: 0;
+            color: #0f172a;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            line-height: 1.1;
+            letter-spacing: -.04em;
+        }
+
+        .portfolio-intro p {
+            margin: 0;
+            color: #64748b;
+            line-height: 1.85;
+        }
+
+
+        /* =====================================================
+           FILTERS
+        ===================================================== */
+
+        .portfolio-filters {
+            padding: 35px 0 25px;
+            background: #fff;
+        }
+
+        .filter-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .filter-btn {
+            padding: 10px 17px;
+            border: 1px solid #e2e8f0;
+            border-radius: 999px;
+            background: #fff;
+            color: #64748b;
+            font: 700 .84rem "DM Sans", sans-serif;
+            cursor: pointer;
+            transition: .25s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            border-color: #2563eb;
+            background: #2563eb;
+            color: #fff;
+        }
+
+
+        /* =====================================================
+           PROJECTS
+        ===================================================== */
+
+        .portfolio-projects {
+            padding: 45px 0 100px;
+            background: #fff;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0,1fr));
+            gap: 28px;
+        }
+
+        .project-card {
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            border-radius: 25px;
+            background: #fff;
+            box-shadow: 0 12px 35px rgba(15,23,42,.055);
+            transition: .3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            border-color: #bfdbfe;
+            box-shadow: 0 25px 60px rgba(15,23,42,.11);
+        }
+
+        .project-card.featured {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+        }
+
+
+        /* =====================================================
+           PROJECT VISUAL AREA
+        ===================================================== */
+
+        .project-visual {
+            position: relative;
+            min-height: 335px;
+            overflow: hidden;
+            background: #0f172a;
+        }
+
+        .project-card:not(.featured) .project-visual {
+            min-height: 285px;
+        }
+
+        .visual-blue {
+            background:
+                radial-gradient(circle at 20% 10%, rgba(96,165,250,.35), transparent 30%),
+                linear-gradient(135deg,#0f172a,#172554,#1d4ed8);
+        }
+
+        .visual-purple {
+            background:
+                radial-gradient(circle at 80% 10%, rgba(167,139,250,.35), transparent 30%),
+                linear-gradient(135deg,#111827,#312e81);
+        }
+
+        .visual-green {
+            background:
+                radial-gradient(circle at 80% 10%, rgba(74,222,128,.25), transparent 30%),
+                linear-gradient(135deg,#052e16,#14532d);
+        }
+
+        .visual-orange {
+            background:
+                radial-gradient(circle at 80% 10%, rgba(251,146,60,.28), transparent 30%),
+                linear-gradient(135deg,#431407,#9a3412);
+        }
+
+        .visual-light {
+            background:
+                radial-gradient(circle at 80% 15%, rgba(37,99,235,.12), transparent 35%),
+                #eff6ff;
+        }
+
+        .visual-tag {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 5;
+            padding: 7px 11px;
+            border: 1px solid rgba(255,255,255,.16);
+            border-radius: 999px;
+            background: rgba(255,255,255,.10);
+            color: #fff;
+            backdrop-filter: blur(10px);
+            font-size: .7rem;
+            font-weight: 800;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+        }
+
+        .visual-light .visual-tag {
+            border-color: #dbeafe;
+            background: #fff;
+            color: #2563eb;
+        }
+
+
+        /* =====================================================
+           1. LEARNSPACE - INTERFACE REALISTA
+        ===================================================== */
+
+        .learnspace-ui {
+            position: absolute;
+            top: 68px;
+            left: 9%;
+            width: 82%;
+            height: 225px;
+            display: grid;
+            grid-template-columns: 115px 1fr;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,.15);
+            border-radius: 15px;
+            background: #fff;
+            box-shadow: 0 25px 60px rgba(0,0,0,.3);
+        }
+
+        .ls-sidebar {
+            padding: 17px 12px;
+            background: #0f172a;
+        }
+
+        .ls-logo {
+            width: 60px;
+            height: 9px;
+            margin-bottom: 22px;
+            border-radius: 6px;
+            background: #60a5fa;
+        }
+
+        .ls-menu {
+            height: 8px;
+            margin-bottom: 13px;
+            border-radius: 6px;
+            background: #334155;
+        }
+
+        .ls-menu.active {
+            background: #2563eb;
+        }
+
+        .ls-main {
+            padding: 17px;
+            background: #f8fafc;
+        }
+
+        .ls-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 14px;
+        }
+
+        .ls-heading {
+            width: 120px;
+            height: 11px;
+            border-radius: 6px;
+            background: #0f172a;
+        }
+
+        .ls-avatar {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #dbeafe;
+        }
+
+        .ls-course-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 8px;
+        }
+
+        .ls-course {
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        .ls-course-image {
+            height: 48px;
+            background: linear-gradient(135deg,#2563eb,#06b6d4);
+        }
+
+        .ls-course:nth-child(2) .ls-course-image {
+            background: linear-gradient(135deg,#7c3aed,#a78bfa);
+        }
+
+        .ls-course:nth-child(3) .ls-course-image {
+            background: linear-gradient(135deg,#059669,#34d399);
+        }
+
+        .ls-course-info {
+            padding: 7px;
+        }
+
+        .ls-course-title {
+            width: 80%;
+            height: 5px;
+            margin-bottom: 6px;
+            border-radius: 4px;
+            background: #334155;
+        }
+
+        .ls-progress {
+            height: 4px;
+            border-radius: 5px;
+            background: #dbeafe;
+        }
+
+        .ls-progress::after {
+            content: "";
+            display: block;
+            width: 65%;
+            height: 100%;
+            border-radius: inherit;
+            background: #2563eb;
+        }
+
+
+        /* =====================================================
+           2. WEBSITE
+        ===================================================== */
+
+        .website-browser {
+            position: absolute;
+            top: 63px;
+            left: 9%;
+            width: 82%;
+            overflow: hidden;
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: 0 25px 60px rgba(0,0,0,.25);
+        }
+
+        .browser-bar {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            height: 27px;
+            padding: 0 10px;
+            background: #e2e8f0;
+        }
+
+        .browser-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #94a3b8;
+        }
+
+        .website-screen {
+            min-height: 220px;
+            padding: 15px 18px;
+            background: #fff;
+        }
+
+        .website-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .website-logo {
+            width: 58px;
+            height: 8px;
+            border-radius: 5px;
+            background: #2563eb;
+        }
+
+        .website-nav-links {
+            display: flex;
+            gap: 7px;
+        }
+
+        .website-nav-links span {
+            width: 28px;
+            height: 5px;
+            border-radius: 5px;
+            background: #cbd5e1;
+        }
+
+        .website-hero {
+            display: grid;
+            grid-template-columns: 1fr .75fr;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .website-copy h4 {
+            width: 90%;
+            height: 15px;
+            margin: 0 0 9px;
+            border-radius: 5px;
+            background: #0f172a;
+        }
+
+        .website-copy p {
+            width: 95%;
+            height: 6px;
+            margin-bottom: 6px;
+            border-radius: 5px;
+            background: #cbd5e1;
+        }
+
+        .website-copy p.short {
+            width: 65%;
+        }
+
+        .website-cta {
+            width: 70px;
+            height: 23px;
+            margin-top: 12px;
+            border-radius: 7px;
+            background: #2563eb;
+        }
+
+        .website-image {
+            height: 120px;
+            border-radius: 12px;
+            background:
+                linear-gradient(135deg,rgba(37,99,235,.85),rgba(6,182,212,.75)),
+                #2563eb;
+        }
+
+
+        /* =====================================================
+           3. PROGRAMAÇÃO
+        ===================================================== */
+
+        .programming-ui {
+            position: absolute;
+            top: 60px;
+            left: 8%;
+            width: 84%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 7px;
+        }
+
+        .code-panel,
+        .result-panel {
+            min-height: 220px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,.25);
+        }
+
+        .code-panel {
+            padding: 17px;
+            background: #020617;
+        }
+
+        .code-title {
+            width: 65px;
+            height: 7px;
+            margin-bottom: 22px;
+            border-radius: 5px;
+            background: #60a5fa;
+        }
+
+        .code-row {
+            display: flex;
+            gap: 7px;
+            margin-bottom: 11px;
+        }
+
+        .code-number {
+            width: 13px;
+            height: 7px;
+            border-radius: 4px;
+            background: #475569;
+        }
+
+        .code-text {
+            width: 75%;
+            height: 7px;
+            border-radius: 4px;
+            background: #334155;
+        }
+
+        .code-row:nth-child(3) .code-text {
+            width: 55%;
+            background: #60a5fa;
+        }
+
+        .code-row:nth-child(5) .code-text {
+            width: 65%;
+            background: #67e8f9;
+        }
+
+        .result-panel {
+            padding: 15px;
+            background: #fff;
+        }
+
+        .result-header {
+            height: 12px;
+            margin-bottom: 17px;
+            border-radius: 5px;
+            background: #2563eb;
+        }
+
+        .result-box {
+            height: 43px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            background: #eff6ff;
+        }
+
+        .result-button {
+            width: 75px;
+            height: 22px;
+            margin-top: 8px;
+            border-radius: 7px;
+            background: #2563eb;
+        }
+
+
+        /* =====================================================
+           4. DOCUMENTOS
+        ===================================================== */
+
+        .documents-ui {
+            position: absolute;
+            top: 47px;
+            left: 18%;
+            width: 64%;
+            min-height: 225px;
+            padding: 22px;
+            border-radius: 9px;
+            background: #fff;
+            box-shadow: 0 25px 55px rgba(15,23,42,.18);
+        }
+
+        .doc-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 22px;
+        }
+
+        .doc-logo {
+            width: 70px;
+            height: 9px;
+            border-radius: 5px;
+            background: #2563eb;
+        }
+
+        .doc-date {
+            width: 50px;
+            height: 6px;
+            border-radius: 5px;
+            background: #cbd5e1;
+        }
+
+        .doc-title {
+            width: 75%;
+            height: 15px;
+            margin-bottom: 16px;
+            border-radius: 5px;
+            background: #0f172a;
+        }
+
+        .doc-line {
+            width: 100%;
+            height: 6px;
+            margin-bottom: 9px;
+            border-radius: 5px;
+            background: #cbd5e1;
+        }
+
+        .doc-line.medium {
+            width: 80%;
+        }
+
+        .doc-line.short {
+            width: 58%;
+        }
+
+        .doc-signature {
+            width: 75px;
+            height: 22px;
+            margin-top: 18px;
+            border-bottom: 1px solid #64748b;
+        }
+
+
+        /* =====================================================
+           5. EXCEL
+        ===================================================== */
+
+        .excel-ui {
+            position: absolute;
+            top: 58px;
+            left: 9%;
+            width: 82%;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 25px 55px rgba(0,0,0,.24);
+        }
+
+        .excel-toolbar {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            height: 30px;
+            padding: 0 10px;
+            background: #166534;
+        }
+
+        .excel-toolbar span {
+            width: 22px;
+            height: 5px;
+            border-radius: 4px;
+            background: rgba(255,255,255,.65);
+        }
+
+        .excel-grid {
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+        }
+
+        .excel-cell {
+            height: 30px;
+            border-right: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+            background: #fff;
+        }
+
+        .excel-cell.head {
+            background: #dcfce7;
+        }
+
+        .excel-cell.green {
+            background: #bbf7d0;
+        }
+
+        .excel-chart {
+            position: absolute;
+            right: 13%;
+            bottom: 55px;
+            width: 105px;
+            height: 70px;
+            display: flex;
+            align-items: end;
+            gap: 7px;
+            padding: 9px;
+            border: 1px solid #dcfce7;
+            border-radius: 9px;
+            background: rgba(255,255,255,.94);
+        }
+
+        .excel-bar {
+            flex: 1;
+            border-radius: 4px 4px 2px 2px;
+            background: #16a34a;
+        }
+
+        .excel-bar:nth-child(1) {
+            height: 35%;
+        }
+
+        .excel-bar:nth-child(2) {
+            height: 60%;
+        }
+
+        .excel-bar:nth-child(3) {
+            height: 45%;
+        }
+
+        .excel-bar:nth-child(4) {
+            height: 80%;
+        }
+
+
+        /* =====================================================
+           6. DESIGN DIGITAL
+        ===================================================== */
+
+        .design-ui {
+            position: absolute;
+            inset: 55px 9% 45px;
+        }
+
+        .social-card {
+            position: absolute;
+            width: 145px;
+            overflow: hidden;
+            border-radius: 13px;
+            background: #fff;
+            box-shadow: 0 20px 45px rgba(0,0,0,.25);
+        }
+
+        .social-card.one {
+            top: 5px;
+            left: 4%;
+            transform: rotate(-7deg);
+        }
+
+        .social-card.two {
+            top: 20px;
+            right: 5%;
+            transform: rotate(6deg);
+        }
+
+        .social-image {
+            height: 105px;
+            background: linear-gradient(135deg,#2563eb,#06b6d4);
+        }
+
+        .social-card.two .social-image {
+            background: linear-gradient(135deg,#7c3aed,#ec4899);
+        }
+
+        .social-info {
+            padding: 10px;
+        }
+
+        .social-info strong {
+            display: block;
+            width: 70%;
+            height: 7px;
+            margin-bottom: 7px;
+            border-radius: 5px;
+            background: #0f172a;
+        }
+
+        .social-info span {
+            display: block;
+            width: 90%;
+            height: 5px;
+            border-radius: 5px;
+            background: #cbd5e1;
+        }
+
+
+        /* =====================================================
+           PROJECT CONTENT
+        ===================================================== */
+
+        .project-content {
+            display: flex;
+            flex-direction: column;
+            padding: 34px;
+        }
+
+        .project-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .project-category {
+            color: #2563eb;
+            font-size: .72rem;
+            font-weight: 800;
+            letter-spacing: .09em;
+            text-transform: uppercase;
+        }
+
+        .project-status {
+            padding: 5px 9px;
+            border-radius: 999px;
+            background: #f1f5f9;
+            color: #64748b;
+            font-size: .68rem;
+            font-weight: 700;
+        }
+
+        .project-content h3 {
+            margin: 0 0 13px;
+            color: #0f172a;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.45rem;
+            line-height: 1.2;
+        }
+
+        .project-content > p {
+            margin: 0 0 22px;
+            color: #64748b;
+            font-size: .93rem;
+            line-height: 1.75;
+        }
+
+        .project-info {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            padding: 12px;
+            border-radius: 11px;
+            background: #f8fafc;
+        }
+
+        .info-item strong {
+            display: block;
+            margin-bottom: 4px;
+            color: #334155;
+            font-size: .68rem;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+        }
+
+        .info-item span {
+            color: #64748b;
+            font-size: .78rem;
+            line-height: 1.4;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 24px;
+        }
+
+        .tech {
+            padding: 6px 9px;
+            border: 1px solid #e2e8f0;
+            border-radius: 7px;
+            color: #475569;
+            background: #fff;
+            font-size: .7rem;
+            font-weight: 700;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: fit-content;
+            margin-top: auto;
+            padding: 11px 16px;
+            border-radius: 10px;
+            background: #eff6ff;
+            color: #2563eb;
+            text-decoration: none;
+            font-size: .82rem;
+            font-weight: 800;
+            transition: .25s ease;
+        }
+
+        .project-link:hover {
+            background: #2563eb;
+            color: #fff;
+            transform: translateX(3px);
+        }
+
+
+        /* =====================================================
+           FUTURE CTA
+        ===================================================== */
+
+        .future-section {
+            padding: 0 0 100px;
+            background: #fff;
+        }
+
+        .future-card {
+            position: relative;
+            overflow: hidden;
+            padding: 60px;
+            border-radius: 28px;
+            background:
+                radial-gradient(circle at 85% 20%, rgba(96,165,250,.18), transparent 25%),
+                linear-gradient(135deg,#0f172a,#172554);
+            color: #fff;
+        }
+
+        .future-card h2 {
+            max-width: 650px;
+            margin: 0 0 15px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(2rem,4vw,3rem);
+            line-height: 1.1;
+        }
+
+        .future-card p {
+            max-width: 700px;
+            margin: 0 0 25px;
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        .future-label {
+            display: block;
+            margin-bottom: 14px;
+            color: #93c5fd;
+            font-size: .75rem;
+            font-weight: 800;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+
+        .future-points {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 28px;
+        }
+
+        .future-point {
+            padding: 8px 12px;
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 999px;
+            background: rgba(255,255,255,.06);
+            color: #e2e8f0;
+            font-size: .76rem;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           FINAL CTA
+        ===================================================== */
+
+        .portfolio-final {
+            padding: 100px 0;
+            background:
+                radial-gradient(circle at 20% 30%,rgba(37,99,235,.10),transparent 30%),
+                #f8fafc;
+            text-align: center;
+        }
+
+        .portfolio-final h2 {
+            max-width: 750px;
+            margin: 0 auto 16px;
+            color: #0f172a;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(2rem,4vw,3.2rem);
+            line-height: 1.1;
+            letter-spacing: -.04em;
+        }
+
+        .portfolio-final p {
+            max-width: 620px;
+            margin: 0 auto 30px;
+            color: #64748b;
+            line-height: 1.8;
+        }
+
+        .final-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width: 900px) {
+
+            .portfolio-intro-grid {
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+
+            .project-card.featured {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media(max-width: 760px) {
+
+            .portfolio-hero {
+                padding: 125px 0 75px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card.featured {
+                grid-column: auto;
+            }
+
+            .project-info {
+                grid-template-columns: 1fr;
+            }
+
+            .future-card {
+                padding: 40px 26px;
+            }
+        }
+
+        @media(max-width: 520px) {
+
+            .portfolio-hero h1 {
+                font-size: 2.45rem;
+            }
+
+            .filter-list {
+                justify-content: flex-start;
+            }
+
+            .project-content {
+                padding: 25px;
+            }
+
+            .learnspace-ui {
+                grid-template-columns: 75px 1fr;
+                left: 6%;
+                width: 88%;
+            }
+
+            .programming-ui {
+                left: 5%;
+                width: 90%;
+            }
+
+            .website-browser {
+                left: 5%;
+                width: 90%;
+            }
+
+            .documents-ui {
+                left: 10%;
+                width: 80%;
+            }
+
+            .excel-ui {
+                left: 5%;
+                width: 90%;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body class="portfolio-page">
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+
+    <div class="container header-content">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-symbol">N</span>
+
+            <span class="logo-text">
+                <strong>NEUSA DIGITAL</strong>
+                <small>SERVICES</small>
+            </span>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">Início</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="portfolio.html" class="active">Portfólio</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="index.html#processo">Como Funciona</a>
+            <a href="index.html#precos">Preços</a>
+            <a href="contacto.html">Contacto</a>
+
+        </nav>
+
+
+        <a href="contacto.html" class="header-button">
+            Solicitar um Serviço
+            <span>↗</span>
+        </a>
+
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            type="button"
+            aria-label="Abrir menu">
+
+            ☰
+
+        </button>
+
+    </div>
+
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="index.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="sobre.html">Sobre Nós</a>
+        <a href="index.html#processo">Como Funciona</a>
+        <a href="index.html#precos">Preços</a>
+        <a href="contacto.html">Contacto</a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="portfolio-hero">
+
+    <div class="container">
+
+        <div class="portfolio-hero-content">
+
+            <div class="portfolio-badge">
+                <i></i>
+                Projectos & Soluções
+            </div>
+
+            <h1>
+                O que fazemos,
+                <span>vê-se aqui.</span>
+            </h1>
+
+            <p>
+                Conheça projectos, soluções e demonstrações que representam
+                as diferentes áreas de actuação da Neusa Digital Services.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="portfolio-intro">
+
+    <div class="container">
+
+        <div class="portfolio-intro-grid">
+
+            <div>
+
+                <span class="portfolio-label">
+                    Portfólio
+                </span>
+
+                <h2>
+                    Cada projecto deve explicar
+                    aquilo que sabemos fazer.
+                </h2>
+
+            </div>
+
+            <p>
+                Por isso, cada projecto apresenta o seu próprio contexto,
+                visual, ferramentas e finalidade. Alguns trabalhos são
+                projectos próprios ou demonstrações e estão identificados
+                como tal.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FILTERS
+===================================================== -->
+
+<section class="portfolio-filters">
+
+    <div class="container">
+
+        <div class="filter-list">
+
+            <button class="filter-btn active" data-filter="all">
+                Todos
+            </button>
+
+            <button class="filter-btn" data-filter="platform">
+                Plataformas
+            </button>
+
+            <button class="filter-btn" data-filter="web">
+                Web & Programação
+            </button>
+
+            <button class="filter-btn" data-filter="office">
+                Office & Dados
+            </button>
+
+            <button class="filter-btn" data-filter="digital">
+                Conteúdo Digital
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJECTOS
+===================================================== -->
+
+<section class="portfolio-projects">
+
+    <div class="container">
+
+        <div class="projects-grid">
+
+
+            <!-- =================================================
+                 LEARNSPACE
+            ================================================== -->
+
+            <article class="project-card featured"
+                data-category="platform">
+
+                <div class="project-visual visual-blue">
+
+                    <span class="visual-tag">
+                        Projecto próprio
+                    </span>
+
+
+                    <div class="learnspace-ui">
+
+                        <aside class="ls-sidebar">
+
+                            <div class="ls-logo"></div>
+
+                            <div class="ls-menu active"></div>
+                            <div class="ls-menu"></div>
+                            <div class="ls-menu"></div>
+                            <div class="ls-menu"></div>
+                            <div class="ls-menu"></div>
+
+                        </aside>
+
+
+                        <div class="ls-main">
+
+                            <div class="ls-top">
+
+                                <div class="ls-heading"></div>
+
+                                <div class="ls-avatar"></div>
+
+                            </div>
+
+
+                            <div class="ls-course-grid">
+
+                                <div class="ls-course">
+
+                                    <div class="ls-course-image"></div>
+
+                                    <div class="ls-course-info">
+
+                                        <div class="ls-course-title"></div>
+                                        <div class="ls-progress"></div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="ls-course">
+
+                                    <div class="ls-course-image"></div>
+
+                                    <div class="ls-course-info">
+
+                                        <div class="ls-course-title"></div>
+                                        <div class="ls-progress"></div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="ls-course">
+
+                                    <div class="ls-course-image"></div>
+
+                                    <div class="ls-course-info">
+
+                                        <div class="ls-course-title"></div>
+                                        <div class="ls-progress"></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-meta">
+
+                        <span class="project-category">
+                            Plataforma Educacional
+                        </span>
+
+                        <span class="project-status">
+                            Projecto próprio
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        LearnSpace
+                    </h3>
+
+
+                    <p>
+                        Plataforma digital de aprendizagem concebida para
+                        organizar cursos, aulas, avaliações, progresso dos
+                        estudantes e certificados numa experiência de
+                        aprendizagem online.
+                    </p>
+
+
+                    <div class="project-info">
+
+                        <div class="info-item">
+
+                            <strong>Problema</strong>
+
+                            <span>
+                                Organizar conteúdos e aprendizagem digital
+                                num único ambiente.
+                            </span>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <strong>Solução</strong>
+
+                            <span>
+                                Plataforma com cursos, aulas, quizzes,
+                                progresso e certificação.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tech-list">
+
+                        <span class="tech">HTML5</span>
+                        <span class="tech">CSS3</span>
+                        <span class="tech">JavaScript</span>
+                        <span class="tech">UI Design</span>
+                        <span class="tech">Responsive Design</span>
+
+                    </div>
+
+
+                    <a href="contacto.html" class="project-link">
+
+                        Quero uma solução semelhante
+
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 WEBSITE
+            ================================================== -->
+
+            <article class="project-card"
+                data-category="web">
+
+                <div class="project-visual visual-light">
+
+                    <span class="visual-tag">
+                        Website
+                    </span>
+
+
+                    <div class="website-browser">
+
+                        <div class="browser-bar">
+
+                            <span class="browser-dot"></span>
+                            <span class="browser-dot"></span>
+                            <span class="browser-dot"></span>
+
+                        </div>
+
+
+                        <div class="website-screen">
+
+                            <div class="website-nav">
+
+                                <div class="website-logo"></div>
+
+                                <div class="website-nav-links">
+
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="website-hero">
+
+                                <div class="website-copy">
+
+                                    <h4></h4>
+
+                                    <p></p>
+                                    <p></p>
+                                    <p class="short"></p>
+
+                                    <div class="website-cta"></div>
+
+                                </div>
+
+
+                                <div class="website-image"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-meta">
+
+                        <span class="project-category">
+                            Desenvolvimento Web
+                        </span>
+
+                        <span class="project-status">
+                            Demonstração
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Website Profissional
+                    </h3>
+
+
+                    <p>
+                        Estrutura de website profissional para empresas,
+                        profissionais, organizações e projectos que precisam
+                        de uma presença digital clara e moderna.
+                    </p>
+
+
+                    <div class="project-info">
+
+                        <div class="info-item">
+
+                            <strong>Objectivo</strong>
+
+                            <span>
+                                Apresentar uma marca e os seus serviços online.
+                            </span>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <strong>Solução</strong>
+
+                            <span>
+                                Website responsivo com navegação e contacto.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tech-list">
+
+                        <span class="tech">HTML5</span>
+                        <span class="tech">CSS3</span>
+                        <span class="tech">JavaScript</span>
+                        <span class="tech">Responsive</span>
+
+                    </div>
+
+
+                    <a href="desenvolvimento-web.html"
+                        class="project-link">
+
+                        Ver serviço
+
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PROGRAMACAO
+            ================================================== -->
+
+            <article class="project-card"
+                data-category="web">
+
+                <div class="project-visual visual-purple">
+
+                    <span class="visual-tag">
+                        Programação
+                    </span>
+
+
+                    <div class="programming-ui">
+
+                        <div class="code-panel">
+
+                            <div class="code-title"></div>
+
+                            <div class="code-row">
+                                <span class="code-number"></span>
+                                <span class="code-text"></span>
+                            </div>
+
+                            <div class="code-row">
+                                <span class="code-number"></span>
+                                <span class="code-text"></span>
+                            </div>
+
+                            <div class="code-row">
+                                <span class="code-number"></span>
+                                <span class="code-text"></span>
+                            </div>
+
+                            <div class="code-row">
+                                <span class="code-number"></span>
+                                <span class="code-text"></span>
+                            </div>
+
+                            <div class="code-row">
+                                <span class="code-number"></span>
+                                <span class="code-text"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="result-panel">
+
+                            <div class="result-header"></div>
+
+                            <div class="result-box"></div>
+                            <div class="result-box"></div>
+
+                            <div class="result-button"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-meta">
+
+                        <span class="project-category">
+                            Programação Web
+                        </span>
+
+                        <span class="project-status">
+                            Demonstração
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Desenvolvimento & Programação
+                    </h3>
+
+
+                    <p>
+                        Desenvolvimento de interfaces e funcionalidades
+                        personalizadas, ligando código, design e
+                        experiência de utilização.
+                    </p>
+
+
+                    <div class="project-info">
+
+                        <div class="info-item">
+
+                            <strong>Necessidade</strong>
+
+                            <span>
+                                Criar uma funcionalidade ou solução específica.
+                            </span>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <strong>Abordagem</strong>
+
+                            <span>
+                                Código estruturado e interface funcional.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tech-list">
+
+                        <span class="tech">JavaScript</span>
+                        <span class="tech">HTML</span>
+                        <span class="tech">CSS</span>
+                        <span class="tech">UI</span>
+
+                    </div>
+
+
+                    <a href="contacto.html" class="project-link">
+
+                        Solicitar programação
+
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 DOCUMENTOS
+            ================================================== -->
+
+            <article class="project-card"
+                data-category="office">
+
+                <div class="project-visual visual-light">
+
+                    <span class="visual-tag">
+                        Documentos
+                    </span>
+
+
+                    <div class="documents-ui">
+
+                        <div class="doc-top">
+
+                            <div class="doc-logo"></div>
+                            <div class="doc-date"></div>
+
+                        </div>
+
+
+                        <div class="doc-title"></div>
+
+                        <div class="doc-line"></div>
+                        <div class="doc-line"></div>
+                        <div class="doc-line medium"></div>
+                        <div class="doc-line short"></div>
+
+                        <div class="doc-signature"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-meta">
+
+                        <span class="project-category">
+                            Documentos Profissionais
+                        </span>
+
+                        <span class="project-status">
+                            Serviço
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        CVs, Cartas & Documentos
+                    </h3>
+
+
+                    <p>
+                        Preparação, revisão, organização e formatação de
+                        documentos profissionais para candidaturas,
+                        trabalho e outras necessidades.
+                    </p>
+
+
+                    <div class="project-info">
+
+                        <div class="info-item">
+
+                            <strong>Exemplos</strong>
+
+                            <span>
+                                CVs, cartas, relatórios e documentos.
+                            </span>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <strong>Ferramenta</strong>
+
+                            <span>
+                                Microsoft Word e PDF.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tech-list">
+
+                        <span class="tech">Word</span>
+                        <span class="tech">PDF</span>
+                        <span class="tech">Formatação</span>
+                        <span class="tech">Revisão</span>
+
+                    </div>
+
+
+                    <a href="contacto.html" class="project-link">
+
+                        Solicitar serviço
+
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 EXCEL
+            ================================================== -->
+
+            <article class="project-card"
+                data-category="office">
+
+                <div class="project-visual visual-green">
+
+                    <span class="visual-tag">
+                        Excel & Dados
+                    </span>
+
+
+                    <div class="excel-ui">
+
+                        <div class="excel-toolbar">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="excel-grid">
+
+                            <span class="excel-cell head"></span>
+                            <span class="excel-cell head"></span>
+                            <span class="excel-cell head"></span>
+                            <span class="excel-cell head"></span>
+                            <span class="excel-cell head"></span>
+
+                            <span class="excel-cell"></span>
+                            <span class="excel-cell green"></span>
+                            <span class="excel-cell"></span>
+                            <span class="excel-cell"></span>
+                            <span class="excel-cell"></span>
+
+                            <span class="excel-cell"></span>
+                            <span class="excel-cell"></span>
+                            <span class="excel-cell green"></span>
+                            <span class="excel-cell"></span>
+                            <span class="excel-cell"></span>
+
+                            <span class="excel-cell"></span>
+                            <span class="excel-cell"></span>
+                            <span class="excel-cell"></span>
+                            <span class="excel-cell green"></span>
+                            <span class="excel-cell"></span>
+
+                            <span class="excel-cell"></span>
+                            <span class="excel-cell green"></span>
+                            <span class="excel-cell"></span>
+                            <span class="excel-cell"></span>
+                            <span class="excel-cell"></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="excel-chart">
+
+                        <span class="excel-bar"></span>
+                        <span class="excel-bar"></span>
+                        <span class="excel-bar"></span>
+                        <span class="excel-bar"></span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-meta">
+
+                        <span class="project-category">
+                            Dados & Excel
+                        </span>
+
+                        <span class="project-status">
+                            Serviço
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Organização & Análise de Dados
+                    </h3>
+
+
+                    <p>
+                        Organização de dados, criação de tabelas, utilização
+                        de fórmulas e preparação de folhas de cálculo para
+                        facilitar a leitura e utilização da informação.
+                    </p>
+
+
+                    <div class="project-info">
+
+                        <div class="info-item">
+
+                            <strong>Ferramenta</strong>
+
+                            <span>
+                                Microsoft Excel.
+                            </span>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <strong>Aplicação</strong>
+
+                            <span>
+                                Tabelas, dados e relatórios.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tech-list">
+
+                        <span class="tech">Excel</span>
+                        <span class="tech">Fórmulas</span>
+                        <span class="tech">Tabelas</span>
+                        <span class="tech">Dados</span>
+
+                    </div>
+
+
+                    <a href="contacto.html" class="project-link">
+
+                        Solicitar serviço
+
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 DESIGN DIGITAL
+            ================================================== -->
+
+            <article class="project-card"
+                data-category="digital">
+
+                <div class="project-visual visual-orange">
+
+                    <span class="visual-tag">
+                        Design Digital
+                    </span>
+
+
+                    <div class="design-ui">
+
+                        <div class="social-card one">
+
+                            <div class="social-image"></div>
+
+                            <div class="social-info">
+
+                                <strong></strong>
+                                <span></span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="social-card two">
+
+                            <div class="social-image"></div>
+
+                            <div class="social-info">
+
+                                <strong></strong>
+                                <span></span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-meta">
+
+                        <span class="project-category">
+                            Conteúdo Digital
+                        </span>
+
+                        <span class="project-status">
+                            Serviço
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Conteúdo & Comunicação Digital
+                    </h3>
+
+
+                    <p>
+                        Criação e organização de materiais digitais para
+                        comunicação, divulgação e apresentação de marcas,
+                        serviços e projectos.
+                    </p>
+
+
+                    <div class="project-info">
+
+                        <div class="info-item">
+
+                            <strong>Materiais</strong>
+
+                            <span>
+                                Posts, flyers, banners e apresentações.
+                            </span>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <strong>Objectivo</strong>
+
+                            <span>
+                                Comunicação visual organizada.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tech-list">
+
+                        <span class="tech">Design</span>
+                        <span class="tech">Posts</span>
+                        <span class="tech">Banners</span>
+                        <span class="tech">Apresentações</span>
+
+                    </div>
+
+
+                    <a href="contacto.html" class="project-link">
+
+                        Solicitar serviço
+
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FUTURO
+===================================================== -->
+
+<section class="future-section">
+
+    <div class="container">
+
+        <div class="future-card">
+
+            <span class="future-label">
+                Próximo projecto
+            </span>
+
+            <h2>
+                O próximo projecto pode ser o seu.
+            </h2>
+
+            <p>
+                Tem uma ideia, uma necessidade ou uma tarefa digital
+                que precisa de ser transformada numa solução profissional?
+                Conte-nos o que pretende fazer.
+            </p>
+
+
+            <div class="future-points">
+
+                <span class="future-point">Websites</span>
+                <span class="future-point">Programação</span>
+                <span class="future-point">Plataformas</span>
+                <span class="future-point">Excel</span>
+                <span class="future-point">Documentos</span>
+                <span class="future-point">Conteúdo Digital</span>
+
+            </div>
+
+
+            <a href="contacto.html" class="white-button">
+
+                Quero iniciar um projecto
+                <span>↗</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA FINAL
+===================================================== -->
+
+<section class="portfolio-final">
+
+    <div class="container">
+
+        <span class="portfolio-label">
+            Vamos criar
+        </span>
+
+        <h2>
+            Tem uma ideia? Vamos transformá-la em solução.
+        </h2>
+
+        <p>
+            Explique o que precisa e vamos encontrar uma forma
+            profissional de transformar a sua necessidade numa
+            solução digital.
+        </p>
+
+
+        <div class="final-buttons">
+
+            <a href="contacto.html" class="primary-button">
+
+                Solicitar um Serviço
+                <span>↗</span>
+
+            </a>
+
+
+            <a href="servicos.html" class="secondary-button">
+
+                Explorar Serviços
+                <span>→</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+
+                    <span class="logo-symbol">N</span>
+
+                    <span class="logo-text">
+                        <strong>NEUSA DIGITAL</strong>
+                        <small>SERVICES</small>
+                    </span>
+
+                </a>
+
+                <p>
+                    Digital Solutions. Professional Results.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Navegação</h4>
+
+                <a href="index.html">Início</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="sobre.html">Sobre Nós</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Serviços</h4>
+
+                <a href="desenvolvimento-web.html">
+                    Desenvolvimento Web
+                </a>
+
+                <a href="contacto.html">
+                    Informática & Office
+                </a>
+
+                <a href="contacto.html">
+                    Documentos
+                </a>
+
+                <a href="contacto.html">
+                    Serviços Académicos
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Contacto</h4>
+
+                <a href="mailto:neusadigitalservices@gmail.com">
+                    neusadigitalservices@gmail.com
+                </a>
+
+                <a href="contacto.html">
+                    WhatsApp
+                </a>
+
+                <span>
+                    Moçambique
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span class="footer-year"></span>
+                Neusa Digital Services. Todos os direitos reservados.
+            </p>
+
+            <p>
+                Digital Solutions. Professional Results.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+
+<!-- =====================================================
+     FILTROS
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const buttons =
+        document.querySelectorAll(".filter-btn");
+
+    const projects =
+        document.querySelectorAll(".project-card");
+
+
+    buttons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const filter =
+                button.dataset.filter;
+
+
+            buttons.forEach(btn =>
+                btn.classList.remove("active")
+            );
+
+            button.classList.add("active");
+
+
+            projects.forEach(project => {
+
+                const category =
+                    project.dataset.category;
+
+
+                if (
+                    filter === "all" ||
+                    category === filter
+                ) {
+
+                    project.style.display = "";
+
+                    setTimeout(() => {
+                        project.style.opacity = "1";
+                        project.style.transform =
+                            "translateY(0)";
+                    }, 20);
+
+                } else {
+
+                    project.style.opacity = "0";
+                    project.style.transform =
+                        "translateY(15px)";
+
+                    setTimeout(() => {
+                        project.style.display = "none";
+                    }, 250);
+
+                }
+
+            });
+
+        });
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>

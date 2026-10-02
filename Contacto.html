@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Contacto | Neusa Digital Services</title>
+
+    <meta
+        name="description"
+        content="Entre em contacto com a Neusa Digital Services para solicitar serviços digitais, desenvolvimento web, programação, documentos, design, informática e muito mais."
+    >
+
+    <meta
+        name="keywords"
+        content="Neusa Digital Services, contacto, serviços digitais, desenvolvimento web, programação, informática, design, Moçambique"
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================================================
+           CONTACTO
+        ========================================================= */
+
+        .contact-page {
+            background: #f8fafc;
+        }
+
+        /* HERO */
+
+        .contact-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 145px 0 90px;
+
+            background:
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(37, 99, 235, .14),
+                    transparent 32%
+                ),
+                radial-gradient(
+                    circle at 10% 80%,
+                    rgba(6, 182, 212, .08),
+                    transparent 30%
+                ),
+                #ffffff;
+        }
+
+        .contact-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+
+            background-image:
+                linear-gradient(
+                    rgba(37, 99, 235, .035) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(37, 99, 235, .035) 1px,
+                    transparent 1px
+                );
+
+            background-size: 42px 42px;
+        }
+
+        .contact-hero-content {
+            position: relative;
+            z-index: 1;
+
+            max-width: 850px;
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .contact-breadcrumb {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+
+            margin-bottom: 24px;
+
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .contact-breadcrumb a {
+            color: #2563eb;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .contact-hero h1 {
+            margin: 0 0 22px;
+
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(42px, 6vw, 68px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+
+            color: #0f172a;
+        }
+
+        .contact-hero h1 span {
+            color: #2563eb;
+        }
+
+        .contact-hero p {
+            max-width: 680px;
+            margin: auto;
+
+            color: #64748b;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* MAIN */
+
+        .contact-section {
+            padding: 90px 0;
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: .75fr 1.25fr;
+            gap: 35px;
+            align-items: start;
+        }
+
+        /* INFO */
+
+        .contact-info {
+            display: grid;
+            gap: 18px;
+        }
+
+        .contact-info-card {
+            padding: 28px;
+
+            border: 1px solid #e2e8f0;
+            border-radius: 22px;
+
+            background: #ffffff;
+
+            transition: .3s ease;
+        }
+
+        .contact-info-card:hover {
+            transform: translateY(-4px);
+
+            border-color: rgba(37, 99, 235, .25);
+
+            box-shadow:
+                0 18px 45px rgba(15, 23, 42, .07);
+        }
+
+        .contact-info-icon {
+            display: grid;
+            place-items: center;
+
+            width: 52px;
+            height: 52px;
+
+            margin-bottom: 18px;
+
+            border-radius: 15px;
+
+            background: #eff6ff;
+            color: #2563eb;
+
+            font-size: 22px;
+        }
+
+        .contact-info-card h3 {
+            margin: 0 0 8px;
+
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 19px;
+
+            color: #0f172a;
+        }
+
+        .contact-info-card p {
+            margin: 0;
+
+            color: #64748b;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .contact-info-card a {
+            color: #2563eb;
+            font-weight: 600;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        /* WHATSAPP */
+
+        .whatsapp-card {
+            padding: 28px;
+
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #0f172a,
+                    #172554
+                );
+
+            color: white;
+
+            box-shadow:
+                0 20px 50px rgba(15, 23, 42, .16);
+        }
+
+        .whatsapp-card .contact-info-icon {
+            background: rgba(255,255,255,.09);
+            color: #ffffff;
+        }
+
+        .whatsapp-card h3 {
+            margin: 0 0 9px;
+
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+        }
+
+        .whatsapp-card p {
+            margin: 0 0 20px;
+
+            color: #cbd5e1;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .whatsapp-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 48px;
+
+            border-radius: 12px;
+
+            background: #ffffff;
+            color: #0f172a;
+
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+
+            transition: .25s ease;
+        }
+
+        .whatsapp-button:hover {
+            transform: translateY(-2px);
+            background: #eff6ff;
+        }
+
+        /* FORM */
+
+        .contact-form-card {
+            padding: 38px;
+
+            border: 1px solid #e2e8f0;
+            border-radius: 28px;
+
+            background: #ffffff;
+
+            box-shadow:
+                0 25px 70px rgba(15, 23, 42, .07);
+        }
+
+        .contact-form-heading {
+            margin-bottom: 30px;
+        }
+
+        .contact-form-heading span {
+            display: inline-block;
+
+            margin-bottom: 10px;
+
+            color: #2563eb;
+
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        .contact-form-heading h2 {
+            margin: 0 0 10px;
+
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 31px;
+
+            color: #0f172a;
+        }
+
+        .contact-form-heading p {
+            margin: 0;
+
+            color: #64748b;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            color: #334155;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .form-group label span {
+            color: #2563eb;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            box-sizing: border-box;
+
+            border: 1px solid #dbe2ea;
+            border-radius: 12px;
+
+            background: #ffffff;
+            color: #0f172a;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 14px;
+
+            outline: none;
+
+            transition:
+                border-color .2s ease,
+                box-shadow .2s ease;
+        }
+
+        .form-group input,
+        .form-group select {
+            height: 51px;
+            padding: 0 15px;
+        }
+
+        .form-group textarea {
+            min-height: 145px;
+            padding: 14px 15px;
+            resize: vertical;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #94a3b8;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #2563eb;
+
+            box-shadow:
+                0 0 0 4px rgba(37, 99, 235, .09);
+        }
+
+        .form-note {
+            margin-top: 7px;
+
+            color: #94a3b8;
+            font-size: 11px;
+        }
+
+        /* CHECKBOX */
+
+        .form-check {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+
+            margin-top: 5px;
+
+            grid-column: 1 / -1;
+        }
+
+        .form-check input {
+            width: 17px;
+            height: 17px;
+
+            margin-top: 2px;
+
+            accent-color: #2563eb;
+        }
+
+        .form-check label {
+            color: #64748b;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        /* SUBMIT */
+
+        .contact-submit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+
+            width: 100%;
+            min-height: 54px;
+
+            margin-top: 25px;
+
+            border: 0;
+            border-radius: 13px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #1d4ed8
+                );
+
+            color: white;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 12px 25px rgba(37, 99, 235, .2);
+
+            transition: .25s ease;
+        }
+
+        .contact-submit:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 18px 35px rgba(37, 99, 235, .25);
+        }
+
+        /* SUCCESS */
+
+        .form-success {
+            display: none;
+
+            margin-top: 20px;
+            padding: 16px;
+
+            border: 1px solid #bbf7d0;
+            border-radius: 12px;
+
+            background: #f0fdf4;
+            color: #166534;
+
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .form-success.show {
+            display: block;
+        }
+
+        /* HOW IT WORKS */
+
+        .how-contact {
+            background: #ffffff;
+        }
+
+        .section-heading-contact {
+            max-width: 720px;
+            margin: 0 auto 50px;
+
+            text-align: center;
+        }
+
+        .section-heading-contact span {
+            display: inline-block;
+
+            margin-bottom: 12px;
+
+            color: #2563eb;
+
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        .section-heading-contact h2 {
+            margin: 0 0 14px;
+
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(30px, 4vw, 44px);
+
+            color: #0f172a;
+        }
+
+        .section-heading-contact p {
+            margin: 0;
+
+            color: #64748b;
+            line-height: 1.8;
+        }
+
+        .contact-process {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .contact-process-item {
+            padding: 28px 23px;
+
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+
+            background: #ffffff;
+        }
+
+        .contact-process-number {
+            display: grid;
+            place-items: center;
+
+            width: 43px;
+            height: 43px;
+
+            margin-bottom: 18px;
+
+            border-radius: 12px;
+
+            background: #eff6ff;
+            color: #2563eb;
+
+            font-weight: 800;
+        }
+
+        .contact-process-item h3 {
+            margin: 0 0 9px;
+
+            color: #0f172a;
+            font-size: 17px;
+        }
+
+        .contact-process-item p {
+            margin: 0;
+
+            color: #64748b;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* SERVICE SELECT */
+
+        .service-highlight {
+            margin-top: 45px;
+            padding: 35px;
+
+            border-radius: 24px;
+
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+        }
+
+        .service-highlight h3 {
+            margin: 0 0 10px;
+
+            font-family: "Space Grotesk", sans-serif;
+            color: #0f172a;
+            font-size: 23px;
+        }
+
+        .service-highlight p {
+            margin: 0 0 25px;
+
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .service-tags span {
+            padding: 9px 13px;
+
+            border: 1px solid #bfdbfe;
+            border-radius: 50px;
+
+            background: white;
+            color: #1d4ed8;
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* CTA */
+
+        .contact-final {
+            padding: 90px 0;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #1d4ed8 55%,
+                    #0f172a
+                );
+        }
+
+        .contact-final-content {
+            max-width: 800px;
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .contact-final-content h2 {
+            margin: 0 0 17px;
+
+            color: white;
+
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(32px, 5vw, 50px);
+            line-height: 1.1;
+        }
+
+        .contact-final-content p {
+            max-width: 650px;
+            margin: 0 auto 28px;
+
+            color: #dbeafe;
+            line-height: 1.8;
+        }
+
+        .contact-final-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 52px;
+            padding: 0 25px;
+
+            border-radius: 12px;
+
+            background: white;
+            color: #1d4ed8;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            transition: .25s ease;
+        }
+
+        .contact-final-button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 1000px) {
+
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .whatsapp-card {
+                grid-column: 1 / -1;
+            }
+
+            .contact-process {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 780px) {
+
+            .contact-hero {
+                padding: 115px 0 70px;
+            }
+
+            .contact-section {
+                padding: 70px 0;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-card {
+                padding: 27px 20px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .form-check {
+                grid-column: auto;
+            }
+
+            .contact-process {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .contact-hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .contact-hero p {
+                font-size: 16px;
+            }
+
+            .service-highlight {
+                padding: 25px 20px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body class="contact-page">
+
+    <!-- HEADER -->
+
+    <header class="site-header">
+
+        <div class="container header-content">
+
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="Neusa Digital Services - Página inicial"
+            >
+
+                <span class="logo-symbol">N</span>
+
+                <span class="logo-text">
+                    <strong>NEUSA DIGITAL</strong>
+                    <small>SERVICES</small>
+                </span>
+
+            </a>
+
+
+            <nav
+                class="main-nav"
+                aria-label="Navegação principal"
+            >
+
+                <a href="index.html">
+                    Início
+                </a>
+
+                <a href="servicos.html">
+                    Serviços
+                </a>
+
+                <a href="portfolio.html">
+                    Portfólio
+                </a>
+
+                <a href="sobre.html">
+                    Sobre Nós
+                </a>
+
+                <a href="index.html#processo">
+                    Como Funciona
+                </a>
+
+                <a href="index.html#precos">
+                    Preços
+                </a>
+
+                <a
+                    href="contacto.html"
+                    class="active"
+                >
+                    Contacto
+                </a>
+
+            </nav>
+
+
+            <a
+                href="contacto.html"
+                class="header-button"
+            >
+                Solicitar um Serviço ↗
+            </a>
+
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="Abrir menu"
+            >
+                ☰
+            </button>
+
+        </div>
+
+
+        <div
+            class="mobile-menu"
+            id="mobileMenu"
+        >
+
+            <a href="index.html">
+                Início
+            </a>
+
+            <a href="servicos.html">
+                Serviços
+            </a>
+
+            <a href="portfolio.html">
+                Portfólio
+            </a>
+
+            <a href="sobre.html">
+                Sobre Nós
+            </a>
+
+            <a href="index.html#processo">
+                Como Funciona
+            </a>
+
+            <a href="index.html#precos">
+                Preços
+            </a>
+
+            <a href="contacto.html">
+                Contacto
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="contact-hero">
+
+            <div class="container contact-hero-content">
+
+                <div class="contact-breadcrumb">
+
+                    <a href="index.html">
+                        Início
+                    </a>
+
+                    <span>›</span>
+
+                    <span>
+                        Contacto
+                    </span>
+
+                </div>
+
+
+                <h1>
+                    Vamos transformar
+                    <span>a sua ideia.</span>
+                </h1>
+
+
+                <p>
+                    Tem um projecto, precisa de um serviço ou simplesmente
+                    quer saber quanto custa? Envie-nos os detalhes.
+                    Responderemos com a orientação adequada para o seu caso.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACTO -->
+
+        <section class="contact-section">
+
+            <div class="container contact-layout">
+
+
+                <!-- INFORMAÇÕES -->
+
+                <aside class="contact-info">
+
+                    <div class="contact-info-card">
+
+                        <div class="contact-info-icon">
+                            ✉
+                        </div>
+
+                        <h3>
+                            E-mail
+                        </h3>
+
+                        <p>
+                            Para pedidos, dúvidas e informações:
+                            <br><br>
+
+                            <a href="mailto:neusamahilene@gmail.com">
+                                neusamahilene@gmail.com
+                            </a>
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-info-card">
+
+                        <div class="contact-info-icon">
+                            ◷
+                        </div>
+
+                        <h3>
+                            Atendimento
+                        </h3>
+
+                        <p>
+                            Respondemos aos pedidos e analisamos cada projecto
+                            antes de confirmar o serviço.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-info-card">
+
+                        <div class="contact-info-icon">
+                            ◉
+                        </div>
+
+                        <h3>
+                            Localização
+                        </h3>
+
+                        <p>
+                            Moçambique
+                            <br>
+                            Atendimento presencial e remoto,
+                            conforme o serviço.
+                        </p>
+
+                    </div>
+
+
+                    <div class="whatsapp-card">
+
+                        <div class="contact-info-icon">
+                            ◉
+                        </div>
+
+                        <h3>
+                            Prefere falar directamente?
+                        </h3>
+
+                        <p>
+                            Envie uma mensagem pelo WhatsApp e explique
+                            brevemente o que precisa.
+                        </p>
+
+                        <!-- O número será configurado no JavaScript -->
+
+                        <a
+                            href="#"
+                            class="whatsapp-button"
+                            id="whatsappDirect"
+                        >
+                            Falar pelo WhatsApp ↗
+                        </a>
+
+                    </div>
+
+                </aside>
+
+
+                <!-- FORMULÁRIO -->
+
+                <div class="contact-form-card">
+
+                    <div class="contact-form-heading">
+
+                        <span>
+                            Pedido de serviço
+                        </span>
+
+                        <h2>
+                            Conte-nos o que precisa.
+                        </h2>
+
+                        <p>
+                            Preencha o formulário abaixo. Ao enviar,
+                            o pedido será preparado automaticamente para
+                            contacto pelo WhatsApp.
+                        </p>
+
+                    </div>
+
+
+                    <form id="serviceForm">
+
+                        <div class="form-grid">
+
+
+                            <!-- NOME -->
+
+                            <div class="form-group">
+
+                                <label for="nome">
+                                    Nome completo <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nome"
+                                    name="nome"
+                                    placeholder="Ex.: Neusa Mahilene"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- EMAIL -->
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    E-mail <span>*</span>
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="seuemail@exemplo.com"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- TELEFONE -->
+
+                            <div class="form-group">
+
+                                <label for="telefone">
+                                    WhatsApp / Telefone <span>*</span>
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="telefone"
+                                    name="telefone"
+                                    placeholder="+258 84 000 0000"
+                                    autocomplete="tel"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <!-- SERVIÇO -->
+
+                            <div class="form-group">
+
+                                <label for="servico">
+                                    Serviço pretendido <span>*</span>
+                                </label>
+
+                                <select
+                                    id="servico"
+                                    name="servico"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Seleccione um serviço
+                                    </option>
+
+                                    <option value="Desenvolvimento Web">
+                                        Desenvolvimento Web
+                                    </option>
+
+                                    <option value="Programação">
+                                        Programação
+                                    </option>
+
+                                    <option value="Landing Page">
+                                        Landing Page
+                                    </option>
+
+                                    <option value="Website Empresarial">
+                                        Website Empresarial
+                                    </option>
+
+                                    <option value="Correção de Website">
+                                        Correção de Website
+                                    </option>
+
+                                    <option value="Manutenção de Website">
+                                        Manutenção de Website
+                                    </option>
+
+                                    <option value="Informática e Microsoft Office">
+                                        Informática & Microsoft Office
+                                    </option>
+
+                                    <option value="Dados e Excel">
+                                        Dados & Excel
+                                    </option>
+
+                                    <option value="Documentos Profissionais">
+                                        Documentos Profissionais
+                                    </option>
+
+                                    <option value="Serviços Académicos">
+                                        Serviços Académicos
+                                    </option>
+
+                                    <option value="Design e Conteúdo Digital">
+                                        Design & Conteúdo Digital
+                                    </option>
+
+                                    <option value="Redes Sociais">
+                                        Redes Sociais & Presença Digital
+                                    </option>
+
+                                    <option value="Assistência Virtual">
+                                        Assistência Virtual
+                                    </option>
+
+                                    <option value="Formação e Tutoria">
+                                        Formação & Tutoria
+                                    </option>
+
+                                    <option value="Outro">
+                                        Outro serviço
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- ORÇAMENTO -->
+
+                            <div class="form-group">
+
+                                <label for="orcamento">
+                                    Orçamento aproximado
+                                </label>
+
+                                <select
+                                    id="orcamento"
+                                    name="orcamento"
+                                >
+
+                                    <option value="">
+                                        Prefiro conversar primeiro
+                                    </option>
+
+                                    <option value="Até 2.000 MT">
+                                        Até 2.000 MT
+                                    </option>
+
+                                    <option value="2.000 - 5.000 MT">
+                                        2.000 - 5.000 MT
+                                    </option>
+
+                                    <option value="5.000 - 10.000 MT">
+                                        5.000 - 10.000 MT
+                                    </option>
+
+                                    <option value="10.000 - 20.000 MT">
+                                        10.000 - 20.000 MT
+                                    </option>
+
+                                    <option value="Mais de 20.000 MT">
+                                        Mais de 20.000 MT
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- PRAZO -->
+
+                            <div class="form-group">
+
+                                <label for="prazo">
+                                    Prazo pretendido
+                                </label>
+
+                                <select
+                                    id="prazo"
+                                    name="prazo"
+                                >
+
+                                    <option value="">
+                                        Ainda não sei
+                                    </option>
+
+                                    <option value="Urgente">
+                                        Urgente
+                                    </option>
+
+                                    <option value="Até 3 dias">
+                                        Até 3 dias
+                                    </option>
+
+                                    <option value="Até 1 semana">
+                                        Até 1 semana
+                                    </option>
+
+                                    <option value="Até 2 semanas">
+                                        Até 2 semanas
+                                    </option>
+
+                                    <option value="Mais de 2 semanas">
+                                        Mais de 2 semanas
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- MENSAGEM -->
+
+                            <div class="form-group full">
+
+                                <label for="mensagem">
+                                    Explique o que precisa <span>*</span>
+                                </label>
+
+                                <textarea
+                                    id="mensagem"
+                                    name="mensagem"
+                                    placeholder="Descreva o seu projecto, serviço que precisa, quantidade de páginas, documentos, funcionalidades ou qualquer outra informação importante..."
+                                    required
+                                ></textarea>
+
+                                <div class="form-note">
+                                    Quanto mais detalhes fornecer, melhor
+                                    poderemos compreender o seu pedido.
+                                </div>
+
+                            </div>
+
+
+                            <!-- CHECK -->
+
+                            <div class="form-check">
+
+                                <input
+                                    type="checkbox"
+                                    id="confirmacao"
+                                    required
+                                >
+
+                                <label for="confirmacao">
+                                    Confirmo que as informações fornecidas
+                                    estão correctas e autorizo a utilização
+                                    destes dados para responder ao meu pedido.
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="contact-submit"
+                        >
+                            Enviar pedido pelo WhatsApp
+                            <span>↗</span>
+                        </button>
+
+
+                        <div
+                            class="form-success"
+                            id="formSuccess"
+                        >
+                            O seu pedido foi preparado. Estamos a abrir o
+                            WhatsApp para concluir o contacto.
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMO FUNCIONA -->
+
+        <section class="contact-section how-contact">
+
+            <div class="container">
+
+                <div class="section-heading-contact">
+
+                    <span>
+                        Depois do contacto
+                    </span>
+
+                    <h2>
+                        O que acontece depois?
+                    </h2>
+
+                    <p>
+                        O processo foi pensado para ser simples, claro e
+                        profissional.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-process">
+
+
+                    <article class="contact-process-item">
+
+                        <div class="contact-process-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Recebemos o pedido
+                        </h3>
+
+                        <p>
+                            Analisamos as informações que enviou e entendemos
+                            exactamente o que pretende.
+                        </p>
+
+                    </article>
+
+
+                    <article class="contact-process-item">
+
+                        <div class="contact-process-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Conversamos
+                        </h3>
+
+                        <p>
+                            Entramos em contacto para esclarecer dúvidas e
+                            definir os detalhes do projecto.
+                        </p>
+
+                    </article>
+
+
+                    <article class="contact-process-item">
+
+                        <div class="contact-process-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Definimos a solução
+                        </h3>
+
+                        <p>
+                            Confirmamos serviço, preço, prazo e o que será
+                            entregue.
+                        </p>
+
+                    </article>
+
+
+                    <article class="contact-process-item">
+
+                        <div class="contact-process-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Começamos
+                        </h3>
+
+                        <p>
+                            Após a confirmação, iniciamos o desenvolvimento
+                            ou execução do serviço.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+
+                <div class="service-highlight">
+
+                    <h3>
+                        Não encontrou o serviço que procura?
+                    </h3>
+
+                    <p>
+                        Não há problema. Explique o que precisa no formulário.
+                        Se estiver dentro das nossas competências, analisaremos
+                        a melhor forma de ajudar.
+                    </p>
+
+
+                    <div class="service-tags">
+
+                        <span>
+                            Programação
+                        </span>
+
+                        <span>
+                            Websites
+                        </span>
+
+                        <span>
+                            Informática
+                        </span>
+
+                        <span>
+                            Excel
+                        </span>
+
+                        <span>
+                            Documentos
+                        </span>
+
+                        <span>
+                            Design
+                        </span>
+
+                        <span>
+                            Serviços Académicos
+                        </span>
+
+                        <span>
+                            Assistência Digital
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+
+        <section class="contact-final">
+
+            <div class="container">
+
+                <div class="contact-final-content">
+
+                    <h2>
+                        Tem uma ideia?
+                        Vamos começar.
+                    </h2>
+
+                    <p>
+                        Não precisa de saber exactamente o que precisa.
+                        Explique a sua situação e ajudaremos a encontrar
+                        uma solução digital adequada.
+                    </p>
+
+                    <a
+                        href="#serviceForm"
+                        class="contact-final-button"
+                    >
+                        Solicitar um Serviço ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="logo"
+                >
+
+                    <span class="logo-symbol">
+                        N
+                    </span>
+
+                    <span class="logo-text">
+
+                        <strong>
+                            NEUSA DIGITAL
+                        </strong>
+
+                        <small>
+                            SERVICES
+                        </small>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+                    Digital Solutions. Professional Results.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Serviços
+                </h3>
+
+                <a href="servicos.html">
+                    Todos os serviços
+                </a>
+
+                <a href="desenvolvimento-web.html">
+                    Desenvolvimento Web
+                </a>
+
+                <a href="contacto.html">
+                    Solicitar serviço
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Empresa
+                </h3>
+
+                <a href="sobre.html">
+                    Sobre Nós
+                </a>
+
+                <a href="portfolio.html">
+                    Portfólio
+                </a>
+
+                <a href="contacto.html">
+                    Contacto
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Contacto
+                </h3>
+
+                <a href="mailto:neusamahilene@gmail.com">
+                    neusamahilene@gmail.com
+                </a>
+
+                <a href="#serviceForm">
+                    WhatsApp
+                </a>
+
+                <span>
+                    Moçambique
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    ©
+                    <span class="footer-year"></span>
+                    Neusa Digital Services.
+                    Todos os direitos reservados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+
+    <!-- CONTACT FORM SCRIPT -->
+
+    <script>
+
+        /*
+        ============================================================
+        CONFIGURAÇÃO DO WHATSAPP
+        ============================================================
+
+        COLOCA AQUI O TEU NÚMERO.
+
+        Exemplo para Moçambique:
+        258841234567
+
+        NÃO coloques:
+        +
+        espaços
+        parênteses
+        hífens
+
+        ============================================================
+        */
+
+        const WHATSAPP_NUMBER = "258852363012";
+
+
+        const serviceForm =
+            document.getElementById("serviceForm");
+
+        const formSuccess =
+            document.getElementById("formSuccess");
+
+        const whatsappDirect =
+            document.getElementById("whatsappDirect");
+
+
+        /*
+        BOTÃO WHATSAPP DIRECTO
+        */
+
+        if (whatsappDirect) {
+
+            whatsappDirect.addEventListener("click", function(event) {
+
+                event.preventDefault();
+
+                const message =
+                    "Olá, Neusa Digital Services! Gostaria de saber mais sobre os serviços disponíveis.";
+
+                const url =
+                    "https://wa.me/" +
+                    WHATSAPP_NUMBER +
+                    "?text=" +
+                    encodeURIComponent(message);
+
+                window.open(url, "_blank");
+
+            });
+
+        }
+
+
+        /*
+        FORMULÁRIO
+        */
+
+        if (serviceForm) {
+
+            serviceForm.addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+
+                const nome =
+                    document.getElementById("nome").value.trim();
+
+                const email =
+                    document.getElementById("email").value.trim();
+
+                const telefone =
+                    document.getElementById("telefone").value.trim();
+
+                const servico =
+                    document.getElementById("servico").value;
+
+                const orcamento =
+                    document.getElementById("orcamento").value ||
+                    "Não informado";
+
+                const prazo =
+                    document.getElementById("prazo").value ||
+                    "Não informado";
+
+                const mensagem =
+                    document.getElementById("mensagem").value.trim();
+
+
+                /*
+                MENSAGEM QUE SERÁ ENVIADA
+                */
+
+                const whatsappMessage =
+`Olá, Neusa Digital Services!
+
+Gostaria de solicitar um serviço.
+
+━━━━━━━━━━━━━━━━━━
+
+👤 NOME
+${nome}
+
+📧 E-MAIL
+${email}
+
+📱 WHATSAPP / TELEFONE
+${telefone}
+
+🛠️ SERVIÇO
+${servico}
+
+💰 ORÇAMENTO
+${orcamento}
+
+⏱️ PRAZO PRETENDIDO
+${prazo}
+
+📝 DESCRIÇÃO DO PROJECTO
+${mensagem}
+
+━━━━━━━━━━━━━━━━━━
+
+Enviado através do site Neusa Digital Services.`;
+
+
+                const whatsappURL =
+                    "https://wa.me/" +
+                    WHATSAPP_NUMBER +
+                    "?text=" +
+                    encodeURIComponent(whatsappMessage);
+
+
+                /*
+                MOSTRAR CONFIRMAÇÃO
+                */
+
+                formSuccess.classList.add("show");
+
+
+                /*
+                ABRIR WHATSAPP
+                */
+
+                setTimeout(function() {
+
+                    window.open(
+                        whatsappURL,
+                        "_blank"
+                    );
+
+                }, 500);
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>
